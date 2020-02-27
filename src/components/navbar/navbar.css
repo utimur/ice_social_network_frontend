@@ -1,0 +1,26 @@
+.navrow {
+  background-color: lightgray;
+  width: 100%;
+}
+.navrow .logo {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+}
+.navrow .log-name {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+.navrow .sign {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 900;
+}
+.navrow a {
+  color: black;
+}
+.navrow a.active {
+  color: indianred;
+}
+/*# sourceMappingURL=navbar.css.map */

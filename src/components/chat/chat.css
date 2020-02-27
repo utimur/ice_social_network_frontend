@@ -1,0 +1,13 @@
+textarea {
+  height: 30vh;
+  resize: none;
+  border: solid 3px gray;
+  border-radius: 30px;
+  box-shadow: -1px -1px 2px 1px gray;
+  display: block;
+}
+.btn {
+  margin-top: 10px;
+  width: 200px;
+}
+/*# sourceMappingURL=chat.css.map */
