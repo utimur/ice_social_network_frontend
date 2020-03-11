@@ -1,25 +1,43 @@
-.navrow{
-  background-color: lightgray;
+.navbar{
+  background-color: #ff8b38;
   width: 100%;
-  .logo{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 40px;
+  box-shadow: 0 1px 3px 1px gray;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.navbar-flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  .log-name{
+    margin-right: auto;
   }
-  .log-name {
-    font-size: 30px;
-    font-weight: 900;
-    margin-top: 10px;
+  .logout-btn{
+    background-color: transparent;
+    width: fit-content;
+    color: white;
+    border:none;
+    &:hover{
+      color: gray;
+    }
   }
-  .sign{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 900;
+  a {
+    margin: 0 20px;
+    color: white;
+    padding: 10px;
+
   }
-  a{
-    color: black;
+  a:hover{
+    color: gray;
+    border: gray;
   }
-  a.active{
-    color:indianred;
+  a.active {
+    border: solid white 3px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  .phalcon.active{
+    border: none;
   }
 }

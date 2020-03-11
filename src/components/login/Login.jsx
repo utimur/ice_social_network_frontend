@@ -2,36 +2,39 @@ import React, {useRef} from "react";
 import './login.css';
 import {useDispatch,useSelector} from "react-redux";
 import axios from 'axios'
-import {login} from "../../actions/user";
+import {signIn} from "../../actions/user";
 
-export default function Login() {
+export default function Login(props) {
     const dispatch = useDispatch()
     const currentUser = useSelector(state => state.user.currentUser)
-    const usernameRef = useRef()
-    const passwordRef = useRef()
+    const username = useRef()
+    const password = useRef()
 
-    function loginButClick(props){
-        axios.post("http://localhost:8080/login",{
-            username:usernameRef.current.value,
-            password: passwordRef.current.value
-        }).then(function (response) {
-            dispatch(login(response.data))
-            alert(response.data.username)
-            alert(response.data.password)
-            alert("SUCCESS")
-        }).catch(response => console.log(response.data))
+    function loginButClick(){
+        axios.post("http://localhost:8080/login", {
+            'username':username.current.value,
+            'password': password.current.value
+        })
+            .then(response => {
+                dispatch(signIn(response.data));
+                props.history.push('/chat')
+            } )
+            .catch(()=>alert("Uncorrect data"))
     }
 
+
     return(
-        <div className="row">
-            <div className="col-6 offset-3">
+            <div className="login-flex">
                 <p className="reg-p">Login</p>
                 <form>
-                    <input placeholder="Enter username" ref={usernameRef} className="form-control"/>
-                    <input type="password" placeholder="Enter password"  ref={passwordRef} className="form-control"/>
-                    <button className="btn btn-primary" onClick={()=>loginButClick()} >Sign in</button>
+                    <p>Username</p>
+                    <input placeholder="Enter username" ref={username} className="form-control"/>
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter password"  ref={password} className="form-control"/>
                 </form>
+                <button className="btn" onClick={()=>loginButClick()} >Sign in</button>
+                <div className="delimeter"></div>
+                <button className="forgot-btn"> Forgot password? </button>
             </div>
-        </div>
     )
 }

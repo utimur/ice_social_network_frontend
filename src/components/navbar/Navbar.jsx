@@ -14,30 +14,30 @@ export default function Navbar(props) {
     }
 
     return (
-        <div className="row navrow">
-            <div className="col-1 logo-div">
-                <img src={logo} className="logo"/>
-            </div>
-            <div className="col-2">
-                <p className="log-name text-uppercase"><NavLink to="/">Phalcon</NavLink></p>
-            </div>
-
-            {
-                user.isLoggedIn  ?
-                    (
-                        <div className="col-1 offset-6 sign-div">
-                            <p className="sign" onClick={()=>logOutClick()}><NavLink to="/">Log out</NavLink></p>
-                        </div>
-                    ) : (
-                    <div className="col-3 offset-6 sign-div">
-                        <div >
-                              <NavLink className="sign" to="/login">Sign in</NavLink>
-                            <NavLink className="sign"  to="/registration">Sign up</NavLink>
-                        </div>
+        <div className="navbar">
+            <div className="container">
+                <div className="navbar-flex">
+                    <img src={logo} className="logo"/>
+                    <div className="log-name">
+                        <NavLink to="/" className="phalcon">Phalcon</NavLink>
                     </div>
-                    )
-            }
 
+                    {
+                        user.isLoggedIn  ?
+                            (
+                                <div className="sign">
+                                   <NavLink to="/"> <button className="logout-btn" onClick={()=>logOutClick()}> Log out</button></NavLink>
+                                </div>
+                            ) : (
+                                <div>
+                                    <NavLink className="sign" to="/login">Sign in </NavLink>
+                                    <NavLink className="sign"  to="/registration">Sign up</NavLink>
+                                </div>
+                            )
+                    }
+
+                </div>
+            </div>
         </div>
     )
 

@@ -1,10 +1,38 @@
-.reg-p {
+.registration-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60vh;
+  margin: auto;
+}
+.registration-flex form {
+  width: 40%;
+}
+.registration-flex form p {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.registration-flex .btn {
+  background-color: #ff8b38;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  text-align: center;
+}
+.registration-flex .reg-p {
   text-align: center;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
 }
-input,
-button {
+.registration-flex input,
+.registration-flex button {
   margin: 10px;
+}
+.registration-flex input {
+  border-radius: 20px;
 }
 /*# sourceMappingURL=registration.css.map */

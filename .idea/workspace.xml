@@ -2,46 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f092ef7a-6754-4fb9-bd5c-da7cc63008f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/phalcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/Chat.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/chat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/chat.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/chat.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/navbar.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/registration/Registration.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/registration/registration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/registration/registration.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/registration/registration.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/phalcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/phalcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/Chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/chat.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/chat.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/Registration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/registration.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/registration.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/user.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +61,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -125,7 +112,18 @@
       <workItem from="1582655403018" duration="4569000" />
       <workItem from="1582705083090" duration="2641000" />
       <workItem from="1582738244463" duration="6011000" />
-      <workItem from="1582820401289" duration="5448000" />
+      <workItem from="1582820401289" duration="5751000" />
+      <workItem from="1582998364624" duration="497000" />
+      <workItem from="1583001923814" duration="1367000" />
+      <workItem from="1583051075966" duration="6625000" />
+      <workItem from="1583140997853" duration="471000" />
+      <workItem from="1583258506734" duration="172000" />
+      <workItem from="1583516847986" duration="184000" />
+      <workItem from="1583571657427" duration="8000" />
+      <workItem from="1583670200016" duration="3533000" />
+      <workItem from="1583744838184" duration="2487000" />
+      <workItem from="1583829887686" duration="6188000" />
+      <workItem from="1583914747861" duration="4756000" />
     </task>
     <servers />
   </component>

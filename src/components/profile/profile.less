@@ -1,0 +1,48 @@
+.profile-flex {
+  display: flex;
+  width: 60vw;
+  margin: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  .avatar {
+    border-radius: 300px; /* Радиус скругления */
+    border: 2px solid #ff8b38; /* Параметры рамки */
+    box-shadow: 0 0 7px black;
+    margin-top: 10px;
+    height: 256px;
+    width: 256px;
+  }
+
+  .user-info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 30px;
+
+    &-reg {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-data {
+      margin: 20px 0;
+    }
+
+    .username {
+      display: inline-block;
+    }
+
+    .id {
+      display: inline-block;
+    }
+
+    .name {
+      display: inline-block;
+    }
+
+    .surname {
+      display: inline-block;
+      margin-left: 4px;
+    }
+  }
+}

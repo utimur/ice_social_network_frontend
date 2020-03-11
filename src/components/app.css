@@ -1,0 +1,8 @@
+.content-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.content-flex .left-bar {
+  width: 20vw;
+}
+/*# sourceMappingURL=app.css.map */

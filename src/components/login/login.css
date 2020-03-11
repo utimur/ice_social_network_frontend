@@ -1,10 +1,52 @@
-.reg-p {
+.login-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60vh;
+  margin: auto;
+}
+.login-flex form {
+  width: 40%;
+}
+.login-flex form p {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.login-flex .btn {
+  background-color: #ff8b38;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  text-align: center;
+}
+.login-flex .reg-p {
   text-align: center;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
 }
-input,
-button {
+.login-flex input,
+.login-flex button {
   margin: 10px;
+}
+.login-flex input {
+  border-radius: 20px;
+}
+.login-flex .delimeter {
+  height: 2px;
+  width: 30%;
+  margin-top: 20px;
+  opacity: 0.5;
+  background-color: black;
+}
+.login-flex .forgot-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=login.css.map */
