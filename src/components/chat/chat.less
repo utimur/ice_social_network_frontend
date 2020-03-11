@@ -1,12 +1,31 @@
-textarea{
-  height: 30vh;
-  resize: none;
-  border: solid 3px gray;
-  border-radius: 30px;
-  box-shadow: -1px -1px 2px 1px gray;
-  display: block;
-}
-.btn{
-  margin-top: 10px;
-  width: 200px;
+.chat-flex {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: 3vh;
+  //align-items: center;
+
+  textarea {
+    height: 10vh;
+    resize: none;
+    border: solid 2px gray;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px 1px gray;
+    display: block;
+  }
+
+  .btn-flex {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      margin-top: 10px;
+      background-color: #ff8b38;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 10px;
+      text-align: right;
+    }
+  }
 }

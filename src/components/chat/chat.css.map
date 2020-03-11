@@ -1,1 +1,1 @@
-{"version":3,"sources":["chat.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,YAAA;EACA,sBAAA;EACA,mBAAA;EACA,kCAAA;EACA,cAAA;;AAEF;EACE,gBAAA;EACA,YAAA","file":"chat.css"}
+{"version":3,"sources":["chat.less"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;EACA,WAAA;;AAJF,UAOE;EACE,YAAA;EACA,YAAA;EACA,sBAAA;EACA,mBAAA;EACA,gCAAA;EACA,cAAA;;AAbJ,UAgBE;EACE,aAAA;EACA,yBAAA;;AAlBJ,UAgBE,UAIE;EACE,gBAAA;EACA,yBAAA;EACA,YAAA;EACA,eAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA","file":"chat.css"}
