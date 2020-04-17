@@ -8,6 +8,8 @@ import {Route, BrowserRouter} from 'react-router-dom'
 import Profile from "./profile/Profile";
 import {useSelector} from "react-redux";
 import "./app.css"
+import Users from "./users/Users";
+import Dialogs from "./dialogs/Dialogs";
 
 export default function App() {
     const user = useSelector(state => state.user.currentUser)
@@ -27,7 +29,9 @@ export default function App() {
                           </div>
                         }
                             <Route path="/chat" component={Chat}/>
-                            <Route path="/profile" component={Profile}/>
+                            <Route path="/profile/:id" component={Profile}/>
+                            <Route path="/users" component={Users}/>
+                            <Route path="/dialogs" component={Dialogs}/>
                         <Route path="/registration" component={Registration} />
                         <Route path="/login" component={Login}/>
                     </div>

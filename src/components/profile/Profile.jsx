@@ -1,28 +1,27 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import {useSelector} from "react-redux";
 import {Redirect} from "react-router-dom";
 import "./profile.css"
-import avatar from '../../assets/img/bboy_avatar.png'
+import ProfileInfo from "./profileInfo/ProfileInfo";
+import PostLenta from "./postLenta/PostLenta";
+
 export default function Profile(props) {
 
-    const user = useSelector(state => state.user.currentUser)
-    if (user.isLoggedIn == false) {
+    const currentUser = useSelector(state => state.user.currentUser)
+
+
+    if (currentUser.isLoggedIn == false) {
         return <Redirect to={"/login"}></Redirect>
     }
 
     return (
-        <div className={"profile-flex"}>
-            <img src={avatar} className="avatar" />
-            <div className={"user-info"}>
-                <div className={"user-info-reg"}>
-                    <div className={"username"}>{user.username}</div>
-                    <div className={"id"}>id: {user.id}</div>
-                </div>
-                <div className={"user-info-data"}>
-                    <div className={"name"}>Тимур</div>
-                    <div className={"surname"}>Ульби</div>
-                </div>
+        <div className={"profile"}>
+            <ProfileInfo id={props.match.params.id}/>
+            <div className={"profile-flex-2"}>
+                <button className="btn">Send message</button>
             </div>
+            <PostLenta/>
         </div>
     )
 }
+

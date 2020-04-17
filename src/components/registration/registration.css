@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 60vh;
   margin: auto;
 }
 .registration-flex form {
@@ -34,5 +33,11 @@
 }
 .registration-flex input {
   border-radius: 20px;
+}
+.registration-flex .delimeter {
+  height: 2px;
+  margin: 20px;
+  opacity: 0.5;
+  background-color: black;
 }
 /*# sourceMappingURL=registration.css.map */

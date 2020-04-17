@@ -12,13 +12,14 @@ export default function MessageList() {
     const messRef = useRef()
 
     useEffect(()=> {
-        axios.get("http://localhost:8080/message")
-            .then(response => {
-                response.data.forEach(item => {
-                    dispatch(addMessage(JSON.parse(item)));
-                })
-            })
-            .then(response => (messRef.current.scrollTop = messRef.current.scrollHeight))
+        axios.get("http://localhost:8080/dialogs")
+            .then(response => console.log(response.data))
+            // .then(response => {
+            //     response.data.forEach(item => {
+            //         dispatch(addMessage(JSON.parse(item)));
+            //     })
+            // })
+            // .then(response => (messRef.current.scrollTop = messRef.current.scrollHeight))
     }, [])
 
     return (

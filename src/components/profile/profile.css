@@ -1,11 +1,28 @@
-.profile-flex {
+.profile .profile-flex-2 {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 3px solid gray;
+  padding-bottom: 20px;
+  margin: 20px;
+}
+.profile .profile-flex-2 .btn {
+  background-color: #ff8b38;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  text-align: center;
+}
+.profile .profile-flex {
   display: flex;
   width: 60vw;
   margin: 20px;
   font-weight: 500;
   font-size: 18px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid gray;
 }
-.profile-flex .avatar {
+.profile .profile-flex .avatar {
   border-radius: 300px;
   /* Радиус скругления */
   border: 2px solid #ff8b38;
@@ -15,29 +32,29 @@
   height: 256px;
   width: 256px;
 }
-.profile-flex .user-info {
+.profile .profile-flex .user-info {
   display: flex;
   width: 100%;
   flex-direction: column;
   margin-left: 30px;
 }
-.profile-flex .user-info-reg {
+.profile .profile-flex .user-info-reg {
   display: flex;
   justify-content: space-between;
 }
-.profile-flex .user-info-data {
+.profile .profile-flex .user-info-data {
   margin: 20px 0;
 }
-.profile-flex .user-info .username {
+.profile .profile-flex .user-info .username {
   display: inline-block;
 }
-.profile-flex .user-info .id {
+.profile .profile-flex .user-info .id {
   display: inline-block;
 }
-.profile-flex .user-info .name {
+.profile .profile-flex .user-info .name {
   display: inline-block;
 }
-.profile-flex .user-info .surname {
+.profile .profile-flex .user-info .surname {
   display: inline-block;
   margin-left: 4px;
 }

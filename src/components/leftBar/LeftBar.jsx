@@ -5,13 +5,16 @@ import {useSelector} from "react-redux";
 
 export default function LeftBar() {
 
+    const user = useSelector(state => state.user.currentUser)
+
     return (
 
         <div className="leftbar">
             <ul>
-                <li><NavLink to="/profile">My profile</NavLink></li>
-                <li><NavLink to="/chat">Dialogs</NavLink> </li>
+                <li><NavLink to={`/profile/${user.id}`}>My profile</NavLink></li>
+                <li><NavLink to="/dialogs">Dialogs</NavLink> </li>
                 <li><NavLink to="3">Friends</NavLink></li>
+                <li><NavLink to="/users">All users</NavLink></li>
             </ul>
         </div>
     )

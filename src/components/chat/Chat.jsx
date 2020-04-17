@@ -16,7 +16,8 @@ export default function Chat(props) {
     function sendMessage(){
         axios.post(url + "message", {
             text: inputRef.current.value,
-            authorId: user.id
+            authorId: user.id,
+            friendId:props.friend.id,
         })
             .then(response => dispatch(addMessage(response.data)))
     }
