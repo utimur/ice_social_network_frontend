@@ -24,17 +24,16 @@ export default function Login(props) {
 
 
     return(
-            <div className="login-flex">
-                <p className="reg-p">Login</p>
-                <form>
-                    <p>Username</p>
-                    <input placeholder="Enter username" ref={username} className="form-control"/>
-                    <p>Password</p>
-                    <input type="password" placeholder="Enter password"  ref={password} className="form-control"/>
-                </form>
-                <button className="btn" onClick={()=>loginButClick()} >Sign in</button>
-                <div className="delimeter"></div>
+        <div className="login-flex">
+            <p className="header">Login</p>
+            <form>
+                <input placeholder="Enter username..." ref={username} className="form-control"/>
+                <input type="password" placeholder="Enter password..."  ref={password} className="form-control"/>
+            </form>
+            <div className={"btns"}>
                 <button className="forgot-btn"> Forgot password? </button>
+                <button className="login-btn" onClick={()=>loginButClick()} >Log in</button>
             </div>
+        </div>
     )
 }

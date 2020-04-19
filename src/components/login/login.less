@@ -3,49 +3,62 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: auto;
-  form{
-    width: 40%;
-    p{
-      margin-left: 20px;
-      font-size: 18px;
-      font-weight: 500;
+  margin: 100px auto;
+  width: fit-content;
+  border: solid black 2px;
+  border-radius: 8px;
+  background: white;
+
+  .header{
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+
+  .form-control{
+    width: 300px;
+    margin: 30px;
+    margin-bottom: 20px;
+    border: #E353D5 solid 2px;
+
+  }
+
+  .btns{
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .login-btn {
+    padding: 3px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #E353D5;
+    box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+    color: white;
+    transition: all 0.5s;
+    &:hover{
+      border-radius: 15px;
+    }
+    &:active , &:focus{
+      outline: none !important;
+
     }
   }
-  .btn{
-    background-color: #ff8b38;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 10px;
-    text-align: center;
-  }
-  .reg-p{
-    text-align: center;
-    font-size: 24px;
-    font-weight: 700;
-  }
 
-  input, button{
-    margin: 10px;
-  }
-  input{
-    border-radius: 20px;
-
-  }
-  .delimeter {
-    height: 2px;
-    width: 30%;
-    margin-top: 20px;
-    opacity: 0.5;
-    background-color: black;
-  }
-  .forgot-btn{
-    background-color: transparent;
-    border: none;
+  .forgot-btn {
     font-size: 12px;
-    font-weight: 500;
-    opacity: 0.5;
+    background: none;
+    border: none;
+    font-weight: 700;
+    opacity: 0.6;
+    transition: all 0.5s;
+    &:hover{
+      opacity: 1;
+    }
   }
+
 }

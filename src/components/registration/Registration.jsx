@@ -24,24 +24,20 @@ export default function Registration() {
     }
 
     return(
-        <div className="container">
-            <div className="registration-flex">
-                <p className="reg-p">Registration</p>
+            <div className="login-flex reg-flex">
+                <p className="header">Registration</p>
                 <form>
-                    <p>Username</p>
-                    <input placeholder="Enter username" ref={usernameRef} className="form-control"/>
-                    <p>Password</p>
-                    <input type="password" placeholder="Enter password"  ref={passwordRef} className="form-control"/>
-                    <div className="delimeter"></div>
-                    <p>Your name</p>
-                    <input  placeholder="Enter your name"  ref={nameRef} className="form-control"/>
-                    <p>Your surname</p>
-                    <input placeholder="Enter your surname"  ref={surnameRef} className="form-control"/>
-                    <label> <input type="checkbox"/> I agree with statement </label>
+                    <input placeholder="Enter username..." ref={usernameRef} className="form-control"/>
+                    <input type="password" placeholder="Enter password..."  ref={passwordRef} className="form-control"/>
+                    <input  placeholder="Enter your name..."  ref={nameRef} className="form-control"/>
+                    <input placeholder="Enter your surname..."  ref={surnameRef} className="form-control"/>
+                    <input placeholder="Enter your email..." type="email" ref={surnameRef} className="form-control"/>
                 </form>
-                <button className="btn" onClick={()=>regButClick()} >Sign up</button>
-
+                <div className="btns">
+                    <input id="reg-checkbox" className="login-checkbox" type="checkbox"/>
+                    <label for="reg-checkbox" className="checkbox-label"><span></span> I agree with terms </label>
+                    <button className="login-btn" onClick={()=>regButClick()} >Sign up</button>
+                </div>
             </div>
-        </div>
     )
 }

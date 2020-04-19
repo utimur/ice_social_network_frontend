@@ -17,16 +17,10 @@ export default function App() {
 
     return (
         <BrowserRouter>
-            <div >
-                <div className="row">
+            <div className={"main"}>
                     <Navbar/>
-                </div>
-                <div className="container">
-                    <div className="content-flex">
                         {user.isLoggedIn == true &&
-                          <div className="left-bar">
                               <LeftBar/>
-                          </div>
                         }
                             <Route path="/chat" component={Chat}/>
                             <Route path="/profile/:id" component={Profile}/>
@@ -34,8 +28,6 @@ export default function App() {
                             <Route path="/dialogs" component={Dialogs}/>
                         <Route path="/registration" component={Registration} />
                         <Route path="/login" component={Login}/>
-                    </div>
-                </div>
             </div>
         </BrowserRouter>
 

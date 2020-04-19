@@ -1,8 +1,15 @@
-.content-flex {
-  display: flex;
-  justify-content: space-between;
+.main {
+  background: url("../assets/img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.content-flex .left-bar {
-  width: 20vw;
+html {
+  background: url("../assets/img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 /*# sourceMappingURL=app.css.map */

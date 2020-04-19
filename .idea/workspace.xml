@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f092ef7a-6754-4fb9-bd5c-da7cc63008f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chat/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/Chat.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/leftBar/LeftBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leftBar/LeftBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/registration/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/Registration.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/registration/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/registration/registration.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/registration/registration.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/registration.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +127,9 @@
       <workItem from="1585897430968" duration="1984000" />
       <workItem from="1585900513077" duration="3198000" />
       <workItem from="1586454963069" duration="29000" />
-      <workItem from="1587112816706" duration="5662000" />
+      <workItem from="1587112816706" duration="6966000" />
+      <workItem from="1587230021052" duration="4509000" />
+      <workItem from="1587286961408" duration="2379000" />
     </task>
     <servers />
   </component>
