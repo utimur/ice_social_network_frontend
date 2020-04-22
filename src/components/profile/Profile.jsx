@@ -10,16 +10,13 @@ export default function Profile(props) {
     const currentUser = useSelector(state => state.user.currentUser)
 
 
-    if (currentUser.isLoggedIn == false) {
-        return <Redirect to={"/login"}></Redirect>
-    }
+    // if (currentUser.isLoggedIn == false) {
+    //     return <Redirect to={"/login"}></Redirect>
+    // }
 
     return (
         <div className={"profile"}>
             <ProfileInfo id={props.match.params.id}/>
-            <div className={"profile-flex-2"}>
-                <button className="btn">Send message</button>
-            </div>
             <PostLenta/>
         </div>
     )

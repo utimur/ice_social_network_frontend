@@ -10,6 +10,7 @@ export default function Registration() {
     const passwordRef = useRef()
     const nameRef = useRef()
     const surnameRef = useRef()
+    const emailRef = useRef()
 
     function regButClick(){
         axios.post("http://localhost:8080/registration",
@@ -18,7 +19,8 @@ export default function Registration() {
                 password: passwordRef.current.value,
                 name: nameRef.current.value,
                 surname: surnameRef.current.value,
-                avatar: ""
+                email: emailRef.current.value,
+                online: "online",
             }).then(response => alert("success"))
             .catch(response => alert("user already exists"))
     }
@@ -31,7 +33,7 @@ export default function Registration() {
                     <input type="password" placeholder="Enter password..."  ref={passwordRef} className="form-control"/>
                     <input  placeholder="Enter your name..."  ref={nameRef} className="form-control"/>
                     <input placeholder="Enter your surname..."  ref={surnameRef} className="form-control"/>
-                    <input placeholder="Enter your email..." type="email" ref={surnameRef} className="form-control"/>
+                    <input placeholder="Enter your email..." type="email" ref={emailRef} className="form-control"/>
                 </form>
                 <div className="btns">
                     <input id="reg-checkbox" className="login-checkbox" type="checkbox"/>

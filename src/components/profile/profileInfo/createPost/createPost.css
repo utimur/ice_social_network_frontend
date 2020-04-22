@@ -1,0 +1,55 @@
+.post-creator {
+  width: 90%;
+  border: solid lightgray 2px;
+  border-radius: 10px;
+  margin: 0 auto 25px auto;
+}
+.post-creator .post-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3px 5px 7px 0;
+}
+.post-creator .post-btns .post-btn {
+  padding: 3px 25px;
+  border: none;
+  border-radius: 5px;
+  background: #E353D5;
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+  color: white;
+  transition: all 0.5s;
+  margin: 0 5px;
+}
+.post-creator .post-btns .post-btn:hover {
+  border-radius: 15px;
+}
+.post-creator .post-btns .post-btn:active,
+.post-creator .post-btns .post-btn:focus {
+  outline: none !important;
+}
+.post-creator .skrepka-btn {
+  width: 30px;
+  height: 30px;
+  background: url("../../../../assets/img/skrepka.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+  margin-right: 7px;
+}
+.post-creator .create-area {
+  border: none;
+  resize: none;
+  width: 95%;
+  height: 90px;
+  margin: 3px;
+}
+.post-creator .create-area:active,
+.post-creator .create-area:focus {
+  outline: none;
+}
+/*# sourceMappingURL=createPost.css.map */

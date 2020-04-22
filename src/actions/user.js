@@ -11,3 +11,11 @@ export const logOut = () => {
         payload: ""
     }
 }
+
+export const updateUser = (field, value) => {
+    return {
+        type: "UPDATE_USER",
+        field: field,
+        payload: value
+    }
+}

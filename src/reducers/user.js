@@ -3,6 +3,11 @@ const defaultState = {
         id: 0,
         username:"",
         password:"",
+        name:"",
+        surname:"",
+        status:"",
+        online:"",
+        email:"",
         isLoggedIn:false,
     }
 }
@@ -16,6 +21,11 @@ export default function user(state = defaultState, action) {
                     username:action.payload.username,
                     password:action.payload.password,
                     id:action.payload.id,
+                    status:action.payload.status,
+                    online:action.payload.online,
+                    name:action.payload.name,
+                    surname:action.payload.surname,
+                    email:action.payload.email,
                     isLoggedIn: true,
                 },
             };
@@ -25,8 +35,21 @@ export default function user(state = defaultState, action) {
                 currentUser: {
                     username:"",
                     password:"",
+                    status:"",
+                    online:"",
+                    name:"",
+                    surname:"",
+                    email:"",
                     id:0,
                     isLoggedIn: false,
+                }
+            }
+        case "UPDATE_USER":
+            return {
+                ...state,
+                currentUser : {
+                    ...state.currentUser,
+                    [action.field]: action.payload
                 }
             }
         default:

@@ -19,15 +19,17 @@ export default function App() {
         <BrowserRouter>
             <div className={"main"}>
                     <Navbar/>
-                        {user.isLoggedIn == true &&
+                    <div className="content-flex">
+                        {/*{user.isLoggedIn == true &&*/}
                               <LeftBar/>
-                        }
+                        {/*}*/}
                             <Route path="/chat" component={Chat}/>
                             <Route path="/profile/:id" component={Profile}/>
                             <Route path="/users" component={Users}/>
                             <Route path="/dialogs" component={Dialogs}/>
                         <Route path="/registration" component={Registration} />
                         <Route path="/login" component={Login}/>
+                    </div>
             </div>
         </BrowserRouter>
 

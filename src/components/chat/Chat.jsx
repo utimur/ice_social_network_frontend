@@ -22,9 +22,9 @@ export default function Chat(props) {
             .then(response => dispatch(addMessage(response.data)))
     }
 
-    if (user.isLoggedIn == false) {
-        return <Redirect to={"/login"}></Redirect>
-    }
+    // if (user.isLoggedIn == false) {
+    //     return <Redirect to={"/login"}></Redirect>
+    // }
     return (
         <div className="chat-flex">
             <MessageList/>

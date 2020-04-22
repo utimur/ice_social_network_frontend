@@ -1,0 +1,191 @@
+.profile-info{
+  display: flex;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  flex-direction: column;
+
+  .dialog-window{
+    display: none;
+    position: fixed;
+    left: 40vw;
+    top: 40vh;
+    text-align: center;
+    background: white;
+    border: lightgray solid 2px;
+    border-top: 40px solid #E353D5;
+    border-top-right-radius: 20px;
+    border-top-left-radius:20px;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+    .dialog-text{
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .dialog-btns{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      button{
+        margin-left: 10px;
+        padding: 3px 20px;
+        border: none;
+        border-radius: 5px;
+        background: #E353D5;
+        box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+        color: white;
+        transition: all 0.5s;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &-flex {
+    padding-bottom: 40px;
+    display: flex;
+  }
+  .avatar-flex{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4px;
+    position: relative;
+    .avatar {
+      height: 250px;
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      border-top-right-radius: 10px;
+      background: no-repeat center center ;
+      background-size: cover;
+    }
+    .avatar-delete-btn {
+      display: none;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 0px;
+      border: none;
+      border-top-right-radius: 8px;
+      background: url("../../../assets/img/delete_avatar.png") no-repeat center center;
+      background-size: cover;
+    }
+    form{
+      width: 100%;
+      position: absolute;
+      bottom: 3px;
+      .avatar-input {
+        display: none;
+        width: 100%;
+      }
+      .avatar-label {
+        cursor: pointer;
+        display: none;
+        background: #E353D5;
+        background: rgba( 0, 0, 0, 0.3);
+        color: white;
+        width: 100%;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+        padding: 3px 0;
+        border-bottom-left-radius: 7px;
+        box-shadow: 0 3px 5px 0px rgba(50, 50, 50, 0.25);
+      }
+    }
+  }
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+    padding: 4px 10px;
+
+    .avatar{
+      border-top-right-radius: 10px !important;
+    }
+
+
+    .profile-btns {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: auto;
+      .profile-btn{
+        padding: 3px 25px;
+        border: none;
+        border-radius: 5px;
+        background: #E353D5;
+        box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+        color: white;
+        transition: all 0.5s;
+        margin: 0 5px;
+        &:hover{
+          border-radius: 15px;
+        }
+        &:active , &:focus{
+          outline: none !important;
+
+        }
+      }
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .status-flex{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .status-area {
+        border: none;
+        resize: none;
+        text-align: right;
+        width: 60%;
+        height: content-box;
+        display: flex;
+        flex-direction: column;
+        outline: none;
+        word-break: break-word;
+        &:focus{
+          border: solid lightgray 1px;
+          border-radius: 10px;
+
+        }
+
+      }
+      .status-btn{
+        display: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 10px;
+        background: #E353D5;
+        box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+        color: white;
+        text-align: right;
+        margin-top: 5px;
+      }
+    }
+
+
+    .id, .status-area {
+      text-align: right;
+      margin-top: 15px;
+      font-weight: 500;
+      font-size: 14px;
+      color: gray;
+    }
+
+    .online {
+      font-weight: 500;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+    &-data {
+      display: flex;
+      justify-content: space-between;
+
+    }
+  }
+}
