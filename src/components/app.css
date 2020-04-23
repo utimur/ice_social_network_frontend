@@ -7,7 +7,7 @@
 }
 .main .content-flex {
   display: flex;
-  padding: 0 90px;
+  padding: 0 150px;
 }
 html {
   background: url("../assets/img/background.jpg") no-repeat center center fixed;

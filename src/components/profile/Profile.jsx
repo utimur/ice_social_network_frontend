@@ -17,7 +17,7 @@ export default function Profile(props) {
     return (
         <div className={"profile"}>
             <ProfileInfo id={props.match.params.id}/>
-            <PostLenta/>
+            <PostLenta id={props.match.params.id}/>
         </div>
     )
 }

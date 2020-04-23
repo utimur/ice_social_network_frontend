@@ -5,11 +5,22 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0px 90px;
+  padding: 0px 150px;
   color: white;
 }
 .nav a {
   color: white;
+}
+.nav .logout-btn {
+  background: none;
+  color: white;
+  border: solid 2px white;
+  border-radius: 8px;
+  padding: 5px 15px;
+}
+.nav .logout-btn:focus,
+.nav .logout-btn:active {
+  outline: none;
 }
 .nav .sign {
   margin-right: 20px;

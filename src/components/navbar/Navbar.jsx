@@ -20,9 +20,7 @@ export default function Navbar(props) {
                 {
                     user.isLoggedIn  ?
                         (
-                            <div className="sign">
                                 <NavLink to="/"> <button className="logout-btn" onClick={()=>logOutClick()}>Log out</button></NavLink>
-                            </div>
                         ) : (
                             <div>
                                 <NavLink className="sign" to="/login">Log in</NavLink>

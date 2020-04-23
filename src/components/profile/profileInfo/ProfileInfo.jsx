@@ -104,7 +104,7 @@ export default function ProfileInfo(props) {
         avatarRef.current.style.backgroundImage = `url(${avatar})`
         axios.post("http://localhost:8080/upload/delete", {
             "id":user_id
-        }).then(response=> alert("AFS"))
+        }).then(response=> dialogRef.current.style.display = "none")
     }
 
     return (
@@ -150,9 +150,7 @@ export default function ProfileInfo(props) {
                     }
                 </div>
             </div>
-            <div>
-                <CreatePost/>
-            </div>
+            <CreatePost id={props.id}/>
         </div>
     );
 };

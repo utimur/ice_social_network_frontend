@@ -6,6 +6,9 @@ import {Provider} from 'react-redux'
 import reducer from './reducers/index'
 
 const store = createStore(reducer)
+store.subscribe(()=>{
+    console.log(store.getState())
+})
 
 ReactDOM.render(
     <Provider store={store}>

@@ -2,11 +2,130 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .lenta-flex .post {
-  border: solid gray 3px;
-  border-radius: 20px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
   padding: 20px;
-  margin: 10px;
+  margin: 20px;
+  font-size: 20px;
+}
+.lenta-flex .post-top-panel {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.lenta-flex .post-top-panel .post-avatar {
+  width: 50px;
+  height: 50px;
+  background: no-repeat center center;
+  background-size: cover;
+  border-radius: 1000px;
+}
+.lenta-flex .post-top-panel .post-username {
+  margin-left: 10px;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 1em;
+}
+.lenta-flex .post-top-panel .post-settings-menu {
+  position: absolute;
+  background: #E353D5;
+  padding: 5px 25px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  right: 1px;
+}
+.lenta-flex .post-top-panel .post-settings-menu .post-setting-my {
+  display: flex;
+  flex-direction: column;
+}
+.lenta-flex .post-top-panel .post-settings-menu-item {
+  padding: 0;
+  background: 0;
+  border: none;
+  color: white;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.lenta-flex .post-top-panel .post-settings {
+  background: url("../../../assets/img/dots.png") no-repeat center center;
+  background-size: contain;
+  height: 36px;
+  width: 15px;
+  border: none;
+}
+.lenta-flex .post-top-panel .post-settings:focus,
+.lenta-flex .post-top-panel .post-settings:active {
+  outline: none;
+}
+.lenta-flex .post-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.lenta-flex .post-content-text {
+  font-size: 0.8em;
+  margin-right: 20px;
+  word-break: break-word;
+  flex: 1 0;
+}
+.lenta-flex .post-content-img {
+  width: 20vw;
+  height: 20vw;
+  background: no-repeat center center;
+  background-size: cover;
+}
+.lenta-flex .post-bottom-panel {
+  display: flex;
+}
+.lenta-flex .post-bottom-panel .post-date {
+  margin-right: auto;
+  font-size: 0.6em;
+  font-weight: 700;
+}
+.lenta-flex .post-bottom-panel .post-comments,
+.lenta-flex .post-bottom-panel .post-likes,
+.lenta-flex .post-bottom-panel .post-reposts {
+  display: flex;
+  margin-left: 10px;
+}
+.lenta-flex .post-bottom-panel .post-comments-count,
+.lenta-flex .post-bottom-panel .post-likes-count,
+.lenta-flex .post-bottom-panel .post-reposts-count {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.lenta-flex .post-bottom-panel .post-comments-btn,
+.lenta-flex .post-bottom-panel .post-likes-btn,
+.lenta-flex .post-bottom-panel .post-reposts-btn {
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 8px;
+}
+.lenta-flex .post-bottom-panel .post-comments-btn:focus,
+.lenta-flex .post-bottom-panel .post-likes-btn:focus,
+.lenta-flex .post-bottom-panel .post-reposts-btn:focus,
+.lenta-flex .post-bottom-panel .post-comments-btn:active,
+.lenta-flex .post-bottom-panel .post-likes-btn:active,
+.lenta-flex .post-bottom-panel .post-reposts-btn:active {
+  outline: none;
+}
+.lenta-flex .post-bottom-panel .post-comments-btn {
+  background: url("../../../assets/img/coment.png") no-repeat center center;
+  background-size: cover;
+}
+.lenta-flex .post-bottom-panel .post-likes-btn {
+  background: url("../../../assets/img/like.png") no-repeat center center;
+  background-size: cover;
+}
+.lenta-flex .post-bottom-panel .post-reposts-btn {
+  background: url("../../../assets/img/repost.png") no-repeat center center;
+  background-size: cover;
 }
 /*# sourceMappingURL=postLenta.css.map */

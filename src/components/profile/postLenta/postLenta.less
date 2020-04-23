@@ -2,10 +2,128 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   .post{
-    border: solid gray 3px;
-    border-radius: 20px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
+    font-size: 20px;
+
+    // Верхняя панель
+    &-top-panel{
+      display: flex;
+      align-items: center;
+      position: relative;
+      .post-avatar{
+        width: 50px;
+        height: 50px;
+        background:  no-repeat center center;
+        background-size: cover;
+        border-radius: 1000px;
+      }
+      .post-username{
+        margin-left: 10px;
+        margin-right: auto;
+        font-weight: 700;
+        font-size: 1em;
+      }
+      .post-settings-menu {
+        position: absolute;
+        background: #E353D5;
+        padding: 5px 25px;
+        border-radius: 8px;
+        display: none;
+        flex-direction: column;
+        right: 1px;
+        .post-setting-my{
+          display: flex;
+          flex-direction: column;
+        }
+        &-item {
+          padding: 0;
+          background: 0;
+          border: none;
+          color: white;
+          font-weight: 500;
+          margin: 5px 0;
+        }
+      }
+      .post-settings{
+        background: url("../../../assets/img/dots.png") no-repeat center center;
+        background-size: contain;
+        height: 36px;
+        width: 15px;
+        border: none;
+        &:focus, &:active{
+          outline: none;
+        }
+      }
+    }
+
+
+    // Контент
+    &-content{
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      &-text {
+        //width: 60%;
+        font-size: 0.8em;
+        margin-right: 20px;
+        word-break: break-word;
+        flex: 1 0;
+      }
+      &-img{
+        width: 20vw;
+        height: 20vw;
+        background: no-repeat center center;
+        background-size: cover;
+      }
+    }
+
+
+    // Нижняя панель
+    &-bottom-panel{
+      display: flex;
+      .post-date{
+        margin-right: auto;
+        font-size: 0.6em;
+        font-weight: 700;
+      }
+
+      .post-comments, .post-likes, .post-reposts {
+        display: flex;
+        margin-left: 10px;
+        &-count{
+          font-size: 0.8em;
+          font-weight: 700;
+        }
+      }
+      .post-comments-btn, .post-likes-btn, .post-reposts-btn{
+        height: 30px;
+        width: 30px;
+        margin-left: 5px;
+        border: none;
+        border-radius: 8px;
+        &:focus, &:active{
+          outline: none;
+        }
+      }
+      .post-comments-btn{
+        background: url("../../../assets/img/coment.png") no-repeat center center;
+        background-size: cover;
+      }
+      .post-likes-btn{
+        background: url("../../../assets/img/like.png") no-repeat center center;
+        background-size: cover;
+      }
+      .post-reposts-btn{
+        background: url("../../../assets/img/repost.png") no-repeat center center;
+        background-size: cover;
+      }
+
+    }
   }
 }
