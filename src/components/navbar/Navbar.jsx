@@ -1,6 +1,6 @@
 import React from "react";
 import './navbar.css'
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/ice-cube.png'
 import {NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {logOut} from "../../actions/user";

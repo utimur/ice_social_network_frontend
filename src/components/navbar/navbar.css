@@ -35,10 +35,11 @@
   text-decoration: none;
 }
 .nav .logo {
-  height: 42px;
+  height: 36px;
 }
 .nav .logo-name {
   margin-right: auto;
+  margin-left: 10px;
   font-size: 26px;
   font-weight: 700;
 }

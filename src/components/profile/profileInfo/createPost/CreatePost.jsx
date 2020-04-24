@@ -18,11 +18,16 @@ export default function CreatePost(props) {
         formData.append("img", fileInputRef.current.files[0])
         formData.append("text",  textRef.current.value)
         const date = new Date()
-        const year = date.getFullYear()
-        const day = date.getDate()
-        const month = date.getMonth()+1
-        const hours = date.getHours()
-        const mins = date.getMinutes()
+        let year = date.getFullYear()
+        let day = date.getDate()
+        if(day < 10) day = "0"+day
+        let month = date.getMonth()+1
+        if(month < 10) month = "0"+month
+        let hours = date.getHours()
+        if(hours < 10) hours = "0"+hours
+        let mins = date.getMinutes()
+        if(mins < 10) mins = "0"+mins
+
         const fullDate = hours+":"+mins+"  " + day +"."+month+"."+year
         formData.append("creation", fullDate)
         axios.post("http://localhost:8080/post",formData,{

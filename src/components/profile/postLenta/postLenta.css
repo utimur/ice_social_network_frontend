@@ -27,8 +27,14 @@
 .lenta-flex .post-top-panel .post-username {
   margin-left: 10px;
   margin-right: auto;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1em;
+}
+.lenta-flex .post-top-panel .post-username a {
+  color: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  text-decoration: none;
 }
 .lenta-flex .post-top-panel .post-settings-menu {
   position: absolute;

@@ -15,10 +15,9 @@ export const getPosts = (posts) => {
     }
 }
 
-export const updatePost = (posts, field) => {
+export const updatePost = (posts) => {
     return{
         type: "UPDATE_POSTS",
-        field: field,
         payload: posts
     }
 }
