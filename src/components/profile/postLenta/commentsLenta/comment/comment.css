@@ -1,0 +1,44 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+}
+.comment-top {
+  display: flex;
+  margin-bottom: 10px;
+}
+.comment-top-img {
+  height: 30px;
+  width: 30px;
+  background: gray no-repeat center center;
+  background-size: cover;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.comment-top-username {
+  font-size: 1em;
+  font-weight: 500;
+  margin-right: auto;
+}
+.comment-top-username a {
+  color: black;
+}
+.comment-top-settings {
+  height: 22px;
+  background: url("../../../../../assets/img/dots.png") no-repeat center center;
+  background-size: cover;
+  border: none;
+}
+.comment-top-settings:active,
+.comment-top-settings:focus {
+  outline: none;
+}
+.comment-text {
+  font-size: 0.9em;
+  word-break: break-word;
+}
+.comment-date {
+  font-size: 0.7em;
+  align-self: flex-end;
+}
+/*# sourceMappingURL=comment.css.map */

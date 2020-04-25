@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f092ef7a-6754-4fb9-bd5c-da7cc63008f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/CommentsLenta.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/leftBar/leftBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leftBar/leftBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/leftBar/leftBar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leftBar/leftBar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/leftBar/leftBar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leftBar/leftBar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/active_comment.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/active_comment.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/PostLenta.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/PostLenta.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/PostComments.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/postComments.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/postComments.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/postComments.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/CreatePost.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/CreatePost.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.less" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +131,8 @@
       <workItem from="1587539154817" duration="11523000" />
       <workItem from="1587569361594" duration="4874000" />
       <workItem from="1587628409912" duration="19259000" />
-      <workItem from="1587720613206" duration="6962000" />
+      <workItem from="1587720613206" duration="7127000" />
+      <workItem from="1587813378478" duration="12273000" />
     </task>
     <servers />
   </component>

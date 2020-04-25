@@ -11,6 +11,7 @@ import axios from 'axios'
 import avatar from "../../../assets/img/avatar.jpg";
 import {getPosts, updatePost, deletePost as deletePostAction} from "../../../actions/post";
 import {NavLink} from "react-router-dom";
+import CommentsLenta from "./commentsLenta/CommentsLenta";
 
 export default function PostLenta(props) {
 
@@ -30,18 +31,11 @@ export default function PostLenta(props) {
     }, [])
 
     function commentClick(post){
-        axios.put("http://localhost:8080/post", {
-            id: post.id,
-            comments: 1
-        }).then(response => {
-            for (let i = 0; i < posts.length ; i++) {
-                if(posts[i].id == post.id){
-                    posts[i].comments = response.data.comments;
-                }
-            }
-            const newPosts = [...posts]
-            dispatch(updatePost(newPosts))
-        })
+        if( document.getElementById("comment-editor-" + post.id).style.display == "flex"){
+            document.getElementById("comment-editor-" + post.id).style.display = "none"
+        } else {
+            document.getElementById("comment-editor-" + post.id).style.display = "flex"
+        }
     }
     function likeClick(post){
         axios.put("http://localhost:8080/post", {
@@ -64,6 +58,7 @@ export default function PostLenta(props) {
             dispatch(updatePost(newPosts))
         })
     }
+
     function repostClick(post){
         axios.put("http://localhost:8080/post", {
             id: post.id,
@@ -128,13 +123,15 @@ export default function PostLenta(props) {
                     </div>
                     <div className="post-content-img" style={post.postImg != null ? {
                         backgroundImage: `url('data:image/jpeg;base64,${post.postImg}`,
-                    } : {width:"0"}}/>
+                    } : {width:"0", height:"0"}}/>
                 </div>
                 <div className="post-bottom-panel">
                     <div className="post-date">{post.creation}</div>
                     <div className="post-comments">
                         <div className="post-comments-count">{post.comments}</div>
-                        <button className="post-comments-btn" onClick={()=>commentClick(post)}/>
+                        <button className="post-comments-btn" style={post.comments > 0 ? {
+                            backgroundImage: `url(${active_comment})`,
+                        } : {}} onClick={()=>commentClick(post)}/>
                     </div>
                     <div className="post-likes">
                         <div className="post-likes-count">{post.likes}</div>
@@ -147,6 +144,7 @@ export default function PostLenta(props) {
                         <button className="post-reposts-btn" onClick={()=>repostClick(post)}/>
                     </div>
                 </div>
+                <CommentsLenta display="none" postId={post.id} userId={currentUser.id}/>
             </div> )}
         </div>
     );

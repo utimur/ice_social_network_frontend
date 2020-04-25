@@ -1,0 +1,50 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 16px;
+  margin: 25px auto 25px auto;
+}
+.comments-header {
+  font-size: 1.4em;
+  opacity: 0.8;
+  font-weight: 500;
+  margin: 5px 10px;
+}
+.comments-editor {
+  display: flex;
+  flex-direction: column;
+  border: solid lightgray 2px;
+  border-radius: 10px;
+  align-items: flex-end;
+}
+.comments-editor-btn {
+  padding: 3px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #E353D5;
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
+  color: white;
+  transition: all 0.5s;
+  margin: 10px 10px;
+  font-size: 1em;
+}
+.comments-editor-btn:hover {
+  border-radius: 15px;
+}
+.comments-editor-btn:active,
+.comments-editor-btn:focus {
+  outline: none !important;
+}
+.comments-editor textarea {
+  border: none;
+  resize: none;
+  width: 99%;
+  height: 90px;
+  margin: 3px;
+}
+.comments-editor textarea:active,
+.comments-editor textarea:focus {
+  outline: none;
+}
+/*# sourceMappingURL=commentsLenta.css.map */

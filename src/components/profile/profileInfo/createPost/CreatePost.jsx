@@ -9,6 +9,8 @@ export default function CreatePost(props) {
     const textRef = useRef()
     const dispatch = useDispatch()
     const fileInputRef = useRef()
+    const loadedRef = useRef()
+    const loadedImgRef = useRef()
     const currentUser = useSelector(state => state.user.currentUser)
 
     function createPost() {
@@ -33,16 +35,31 @@ export default function CreatePost(props) {
         axios.post("http://localhost:8080/post",formData,{
             headers: {
                 'Content-Type' : 'multipart/form-data'
-            }}).then(response => dispatch(addPost(response.data)))
+            }}).then(response => {
+            dispatch(addPost(response.data))
+            loadedRef.current.style.display = "none"
+        })
+    }
+
+    function screpkaClick() {
+        loadedRef.current.style.display = "block"
+        var fr = new FileReader();
+        fr.onload = function () {
+            loadedImgRef.current.style.backgroundImage = `url(${fr.result})`
+        }
+        fr.readAsDataURL(fileInputRef.current.files[0]);
     }
 
     return (
         <div className="post-creator">
-            <textarea className="create-area" placeholder="Share your news..." ref={textRef}></textarea>
+            <textarea className="create-area" placeholder="Share your news..." ref={textRef}/>
             <div className="post-btns">
-                <label for="post-file" className="file-label"></label>
-                <input type="file" id="post-file" ref={fileInputRef} className="skrepka-btn"></input>
+                <label for="post-file" className="file-label"/>
+                <input type="file" id="post-file" onChange={() =>screpkaClick()} ref={fileInputRef} className="skrepka-btn"/>
                 <button className="post-btn" onClick={()=>createPost()}>Add post</button>
+            </div>
+            <div className="loaded" ref={loadedRef}>
+                <div className="loaded-img" ref={loadedImgRef}></div>
             </div>
         </div>
     )

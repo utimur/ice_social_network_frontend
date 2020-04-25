@@ -27,6 +27,7 @@
   outline: none !important;
 }
 .post-creator .file-label {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   background: url("../../../../assets/img/skrepka.png") no-repeat center center;
@@ -51,5 +52,17 @@
 .post-creator .create-area:active,
 .post-creator .create-area:focus {
   outline: none;
+}
+.post-creator .loaded {
+  border-top: solid lightgray 2px;
+  padding: 5px;
+  display: none;
+}
+.post-creator .loaded-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: no-repeat center center;
+  background-size: cover;
 }
 /*# sourceMappingURL=createPost.css.map */

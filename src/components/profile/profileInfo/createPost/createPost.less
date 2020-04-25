@@ -24,12 +24,12 @@
 
       &:active, &:focus {
         outline: none !important;
-
       }
     }
   }
 
   .file-label{
+    cursor: pointer;
     width: 30px;
     height: 30px;
     background: url("../../../../assets/img/skrepka.png") no-repeat center center ;
@@ -55,5 +55,16 @@
       outline: none;
     }
   }
-
+  .loaded{
+    border-top: solid lightgray 2px;
+    padding: 5px;
+    display: none;
+    &-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      background: no-repeat center center;
+      background-size: cover;
+    }
+  }
 }

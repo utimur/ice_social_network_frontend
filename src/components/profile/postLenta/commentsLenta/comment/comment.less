@@ -1,0 +1,42 @@
+.comment{
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+  &-top{
+    display: flex;
+    margin-bottom: 10px;
+    &-img {
+      height: 30px;
+      width: 30px;
+      background: gray no-repeat center center;
+      background-size: cover;
+      border-radius: 100px;
+      margin-right: 10px;
+    }
+    &-username {
+      font-size: 1em;
+      font-weight: 500;
+      margin-right: auto;
+      a{
+        color: black;
+      }
+    }
+    &-settings {
+      height: 22px;
+      background: url("../../../../../assets/img/dots.png") no-repeat center center;
+      background-size: cover;
+      border: none;
+      &:active, &:focus{
+        outline: none;
+      }
+    }
+  }
+  &-text{
+    font-size: 0.9em;
+    word-break: break-word;
+  }
+  &-date{
+    font-size: 0.7em;
+    align-self: flex-end;
+  }
+}
