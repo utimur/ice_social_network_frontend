@@ -2,18 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f092ef7a-6754-4fb9-bd5c-da7cc63008f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/CommentsLenta.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/active_comment.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/active_comment.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/delete_avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/delete_avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/Chat.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/messageList/MessageList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/messageList/messageList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/messageList/messageList.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/messageList/messageList.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/leftBar/LeftBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leftBar/LeftBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/PostLenta.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/PostLenta.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/PostComments.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/postComments.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/postComments.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postComments/postComments.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/CommentsLenta.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/CommentsLenta.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/Comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/Comment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/comment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/comment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/comment.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/comment.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/comment.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/comment/comment.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/commentsLenta/commentsLenta.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/postLenta/postLenta.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/ProfileInfo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/CreatePost.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/CreatePost.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/createPost/createPost.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/profileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/profileInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/profileInfo.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/profileInfo.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileInfo/profileInfo.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileInfo/profileInfo.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/Users.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/users.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/users.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/users.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/user.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +83,11 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tim\Desktop\23.02.20_react_spring_app\front\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tim\Desktop\23.02.20_react_spring_app\front\src\components\navbar" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tim\Desktop\23.02.20_react_spring_app\front\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -132,7 +165,15 @@
       <workItem from="1587569361594" duration="4874000" />
       <workItem from="1587628409912" duration="19259000" />
       <workItem from="1587720613206" duration="7127000" />
-      <workItem from="1587813378478" duration="12273000" />
+      <workItem from="1587813378478" duration="12971000" />
+      <workItem from="1587838450880" duration="891000" />
+      <workItem from="1587888834985" duration="986000" />
+      <workItem from="1587919368860" duration="599000" />
+      <workItem from="1587976091275" duration="5693000" />
+      <workItem from="1588094568509" duration="3792000" />
+      <workItem from="1588148827849" duration="8384000" />
+      <workItem from="1588255309993" duration="438000" />
+      <workItem from="1588320228158" duration="15422000" />
     </task>
     <servers />
   </component>

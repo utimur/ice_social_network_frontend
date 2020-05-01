@@ -9,8 +9,9 @@
   background: white;
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
+  margin-bottom: 25px;
   font-size: 20px;
+  border: #E353D5 solid 2px;
 }
 .lenta-flex .post-top-panel {
   display: flex;
@@ -23,6 +24,7 @@
   background: no-repeat center center;
   background-size: cover;
   border-radius: 1000px;
+  border: 1px #E353D5 solid;
 }
 .lenta-flex .post-top-panel .post-username {
   margin-left: 10px;
@@ -71,7 +73,7 @@
 .lenta-flex .post-content {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 50px 0;
 }
 .lenta-flex .post-content-text {
   font-size: 0.8em;

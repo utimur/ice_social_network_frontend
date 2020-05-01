@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 15px 15px;
+  position: relative;
 }
 .comment-top {
   display: flex;
@@ -14,6 +15,7 @@
   background-size: cover;
   border-radius: 100px;
   margin-right: 10px;
+  border: 1px #E353D5 solid;
 }
 .comment-top-username {
   font-size: 1em;
@@ -28,10 +30,33 @@
   background: url("../../../../../assets/img/dots.png") no-repeat center center;
   background-size: cover;
   border: none;
+  position: relative;
 }
 .comment-top-settings:active,
 .comment-top-settings:focus {
   outline: none;
+}
+.comment-top-settings-menu {
+  position: absolute;
+  background: #E353D5;
+  padding: 5px 25px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  right: 1px;
+  top: 50px;
+}
+.comment-top-settings-menu-my {
+  display: flex;
+  flex-direction: column;
+}
+.comment-top-settings-menu-item {
+  padding: 0;
+  background: 0;
+  border: none;
+  color: white;
+  font-weight: 500;
+  margin: 5px 0;
 }
 .comment-text {
   font-size: 0.9em;

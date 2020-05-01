@@ -1,0 +1,49 @@
+.friends {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+.friends a {
+  color: black;
+}
+.friends a:hover {
+  opacity: 0.7;
+  color: black;
+  text-decoration: none;
+}
+.friends .left-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0;
+}
+.friends .right-block {
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  border: solid #E353D5 2px;
+  width: 250px;
+}
+.friends .right-block .friends-header {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+.friends .right-block .friend-flex {
+  display: flex;
+  margin-top: 5px;
+}
+.friends .right-block .friend-flex-avatar {
+  background: url("../../../../assets/img/avatar.jpg") no-repeat center center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  margin-right: 5px;
+  border: 1px #E353D5 solid;
+}
+.no-friends {
+  text-align: center;
+}
+/*# sourceMappingURL=friends.css.map */

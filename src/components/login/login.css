@@ -36,10 +36,6 @@
   background: #E353D5;
   box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
   color: white;
-  transition: all 0.5s;
-}
-.login-flex .login-btn:hover {
-  border-radius: 15px;
 }
 .login-flex .login-btn:active,
 .login-flex .login-btn:focus {

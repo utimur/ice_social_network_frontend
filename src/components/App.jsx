@@ -1,5 +1,4 @@
 import React from "react";
-import Chat from "./chat/Chat";
 import Navbar from "./navbar/Navbar";
 import Registration from "./registration/Registration";
 import Login from "./login/Login";
@@ -8,8 +7,8 @@ import {Route, BrowserRouter} from 'react-router-dom'
 import Profile from "./profile/Profile";
 import {useSelector} from "react-redux";
 import "./app.css"
-import Users from "./users/Users";
 import Dialogs from "./dialogs/Dialogs";
+import FriendList from "./friendList/FriendList";
 
 export default function App() {
     const user = useSelector(state => state.user.currentUser)
@@ -23,9 +22,8 @@ export default function App() {
                         {/*{user.isLoggedIn == true &&*/}
                               <LeftBar/>
                         {/*}*/}
-                            <Route path="/chat" component={Chat}/>
                             <Route path="/profile/:id" component={Profile}/>
-                            <Route path="/users" component={Users}/>
+                            <Route path="/friends/:id" component={FriendList}/>
                             <Route path="/dialogs" component={Dialogs}/>
                         <Route path="/registration" component={Registration} />
                         <Route path="/login" component={Login}/>

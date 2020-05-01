@@ -3,7 +3,7 @@ import './commentsLenta.css';
 import Comment from "./comment/Comment";
 import axios from 'axios';
 import {useDispatch, useSelector} from "react-redux";
-import {updatePost} from "../../../../actions/post";
+import {deletePost as deletePostAction, updatePost} from "../../../../actions/post";
 import active_like from "../../../../assets/img/active_like.png";
 import like from "../../../../assets/img/like.png";
 
@@ -49,18 +49,30 @@ export default function CommentsLenta(props) {
         })
     }
 
+    function deleteComment(comment) {
+        axios.delete(`http://localhost:8080/post/comments?id=${comment.id}`)
+            .then(()=> {
+                setComments(comments.filter(com=> com.id != comment.id))
+            })
+    }
+
+
     return (
         <div className="comments"  >
-            <div className="comments-header">Comments</div>
-            <div className="comments-editor" id={"comment-editor-" + props.postId} style={
+             <div className="comments-editor" id={"comment-editor-" + props.postId} style={
                 {display: props.display}
             }>
                 <textarea placeholder="Write your comment..." ref={textRef}></textarea>
                 <button className="comments-editor-btn" onClick={()=>commentClick()}>Comment</button>
             </div>
+            {comments.length != 0 &&
+            <div className="comments-header">Comments</div>
+            }
             {comments.map(com =>
-                <Comment comment={com}/>
+                <Comment deleteComment={deleteComment} comment={com}/>
             )}
         </div>
     );
+
+
 }

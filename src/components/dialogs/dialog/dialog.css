@@ -1,0 +1,32 @@
+.dialog {
+  display: flex;
+  padding: 10px 20px;
+}
+.dialog-img {
+  background: gray no-repeat center center;
+  background-size: cover;
+  height: 60px;
+  border-radius: 100px;
+  width: 60px;
+}
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.dialog-content-username {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.dialog-content-message {
+  font-size: 0.8em;
+  color: gray;
+  font-weight: 500;
+}
+.dialog-date {
+  margin-left: auto;
+  font-size: 0.8em;
+  color: gray;
+  font-weight: 500;
+}
+/*# sourceMappingURL=dialog.css.map */

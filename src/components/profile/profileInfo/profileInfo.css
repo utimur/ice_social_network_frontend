@@ -1,8 +1,6 @@
 .profile-info {
   display: flex;
   width: 100%;
-  background: white;
-  border-radius: 10px;
   flex-direction: column;
 }
 .profile-info .dialog-window {
@@ -40,22 +38,25 @@
   font-size: 12px;
 }
 .profile-info-flex {
-  padding-bottom: 40px;
+  border-radius: 10px;
   display: flex;
+  margin-bottom: 25px;
 }
 .profile-info .avatar-flex {
   display: flex;
+  border: solid #E353D5 2px;
   flex-direction: column;
-  padding-bottom: 4px;
   position: relative;
+  background: white;
+  border-radius: 10px;
 }
 .profile-info .avatar-flex .avatar {
   height: 250px;
   width: 250px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border-top-right-radius: 10px;
   background: no-repeat center center;
   background-size: cover;
 }
@@ -73,7 +74,7 @@
 .profile-info .avatar-flex form {
   width: 100%;
   position: absolute;
-  bottom: 3px;
+  bottom: 0;
 }
 .profile-info .avatar-flex form .avatar-input {
   display: none;
@@ -99,6 +100,10 @@
   justify-content: flex-start;
   width: 80%;
   padding: 4px 10px;
+  background: white;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: solid #E353D5 2px;
 }
 .profile-info .user-info .avatar {
   border-top-right-radius: 10px !important;
@@ -107,6 +112,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: auto;
+  margin-bottom: 10px;
 }
 .profile-info .user-info .profile-btns .profile-btn {
   padding: 3px 25px;
@@ -115,11 +121,7 @@
   background: #E353D5;
   box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
   color: white;
-  transition: all 0.5s;
   margin: 0 5px;
-}
-.profile-info .user-info .profile-btns .profile-btn:hover {
-  border-radius: 15px;
 }
 .profile-info .user-info .profile-btns .profile-btn:active,
 .profile-info .user-info .profile-btns .profile-btn:focus {

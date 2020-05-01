@@ -9,6 +9,7 @@ const defaultState = {
         online:"",
         email:"",
         isLoggedIn:false,
+        friends:[]
     }
 }
 

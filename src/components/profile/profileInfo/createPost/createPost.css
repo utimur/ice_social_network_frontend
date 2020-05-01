@@ -1,15 +1,20 @@
 .post-creator {
-  width: 90%;
-  border: solid lightgray 2px;
+  width: 100%;
   border-radius: 10px;
-  margin: 0 auto 25px auto;
+  margin: 25px auto 25px auto;
+  background: white;
+  padding: 10px;
+  border: solid #E353D5 2px;
 }
-.post-creator .post-btns {
+.post-creator-flex {
+  border-radius: 10px;
+}
+.post-creator-flex .post-btns {
   display: flex;
   justify-content: flex-end;
   margin: 3px 5px 7px 0;
 }
-.post-creator .post-btns .post-btn {
+.post-creator-flex .post-btns .post-btn {
   padding: 3px 25px;
   border: none;
   border-radius: 5px;
@@ -19,14 +24,14 @@
   transition: all 0.5s;
   margin: 0 5px;
 }
-.post-creator .post-btns .post-btn:hover {
+.post-creator-flex .post-btns .post-btn:hover {
   border-radius: 15px;
 }
-.post-creator .post-btns .post-btn:active,
-.post-creator .post-btns .post-btn:focus {
+.post-creator-flex .post-btns .post-btn:active,
+.post-creator-flex .post-btns .post-btn:focus {
   outline: none !important;
 }
-.post-creator .file-label {
+.post-creator-flex .file-label {
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -39,26 +44,27 @@
   box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
   margin-right: 7px;
 }
-.post-creator .skrepka-btn {
+.post-creator-flex .skrepka-btn {
   display: none;
 }
-.post-creator .create-area {
+.post-creator-flex .create-area {
+  background: white;
   border: none;
   resize: none;
-  width: 95%;
+  width: 98%;
   height: 90px;
   margin: 3px;
 }
-.post-creator .create-area:active,
-.post-creator .create-area:focus {
+.post-creator-flex .create-area:active,
+.post-creator-flex .create-area:focus {
   outline: none;
 }
-.post-creator .loaded {
+.post-creator-flex .loaded {
   border-top: solid lightgray 2px;
   padding: 5px;
   display: none;
 }
-.post-creator .loaded-img {
+.post-creator-flex .loaded-img {
   width: 60px;
   height: 60px;
   border-radius: 8px;

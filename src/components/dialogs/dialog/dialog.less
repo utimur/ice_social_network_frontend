@@ -1,0 +1,35 @@
+.dialog {
+  display: flex;
+  padding: 10px 20px;
+  &-img {
+    background: gray no-repeat center center;
+    background-size: cover;
+    height: 60px;
+    border-radius: 100px;
+    width: 60px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    &-username {
+      font-size: 1.2em;
+      font-weight: 700;
+
+    }
+
+    &-message {
+      font-size: 0.8em;
+      color: gray;
+      font-weight: 500;
+    }
+  }
+
+  &-date{
+    margin-left: auto;
+    font-size: 0.8em;
+    color: gray;
+    font-weight: 500;
+  }
+}

@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from "react-redux";
 import { updateUser} from '../../../actions/user'
 
 import CreatePost from "./createPost/CreatePost";
+import Friends from "./friends/Friends";
 
 export default function ProfileInfo(props) {
 
@@ -20,21 +21,57 @@ export default function ProfileInfo(props) {
     const updateStatusRef = useRef();
     const user_id = useSelector(state => state.user.currentUser.id)
     const currentUser = useSelector(state => state.user.currentUser)
-
-
+    const [isFriend, setIsFriend] = useState(false);
+    const [friends, setFriends] = useState([])
+    const [followers, setFollowers] = useState([]);
+    const [following, setFollowing] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/profile/${props.id}`)
-            .then(response => {
-                setUser(response.data)
+        getAvatar()
+        getFriends()
+        getFollowing()
+        getFollowers()
+        getIsFriend()
+        getProfile()
+    }, [props.id, isFriend]);
+
+    function getFollowers() {
+        axios.get(`http://localhost:8080/friends/followers?id=${props.id}`)
+            .then(response=>{
+                if(response.data.length > 5){
+                    setFollowers(response.data.slice(0,5));
+                } else {
+                    setFollowers(response.data);
+                }
             })
-        axios
-            .get(
-                `http://localhost:8080/upload?user_id=${props.id}`,
-                { responseType: 'arraybuffer' },
-            )
+    }
+    function getFollowing() {
+        axios.get(`http://localhost:8080/friends/following?id=${props.id}`)
+            .then(response=>{
+                if(response.data.length > 5){
+                    setFollowing(response.data.slice(0,5));
+                } else {
+                    setFollowing(response.data);
+                }
+            })
+    }
+    function getFriends() {
+        axios.get(`http://localhost:8080/friends?id=${props.id}`)
+            .then(response=>{
+                if(response.data.length > 3){
+                    setFriends(response.data.slice(0,3));
+                } else {
+                    setFriends(response.data);
+                }
+            })
+    }
+    function getAvatar() {
+        axios.get(
+            `http://localhost:8080/upload?user_id=${props.id}`,
+            {responseType: 'arraybuffer'},
+        )
             .then(response => {
-                if(response.data.byteLength != 0){
+                if (response.data.byteLength != 0) {
                     const base64 = btoa(
                         new Uint8Array(response.data).reduce(
                             (data, byte) => data + String.fromCharCode(byte),
@@ -45,9 +82,22 @@ export default function ProfileInfo(props) {
                 } else {
                     avatarRef.current.style.backgroundImage = `url(${avatar})`
                 }
-
             });
-    }, [])
+    }
+    function getIsFriend() {
+        axios.get(`http://localhost:8080/friends/find?id=${currentUser.id}&friend_id=${props.id}`)
+            .then(responce => {
+                if (responce.data) {
+                    setIsFriend(true);
+                }
+            })
+    }
+    function getProfile() {
+        axios.get(`http://localhost:8080/profile/${props.id}`)
+            .then(response => {
+                setUser(response.data)
+            })
+    }
 
     function sendFile() {
         const form = new FormData()
@@ -107,6 +157,24 @@ export default function ProfileInfo(props) {
         }).then(response=> dialogRef.current.style.display = "none")
     }
 
+    function follow() {
+        axios.post("http://localhost:8080/friends", {
+            id:currentUser.id,
+            friendId:props.id
+        }).then(response=>{
+            setIsFriend(true);
+            // setFollowing([...followers, response.data])
+        })
+    }
+
+    function unfollow() {
+        axios.delete(`http://localhost:8080/friends?id=${currentUser.id}&friend_id=${props.id}`)
+            .then(response => {
+                setIsFriend(false);
+                console.log(response.data)
+            })
+    }
+
     return (
         <div className={"profile-info"}>
             <div className="dialog-window"  ref={dialogRef}>
@@ -131,10 +199,14 @@ export default function ProfileInfo(props) {
                         </div>
                         <button onClick={()=>updateStatus()} className="status-btn" ref={updateStatusRef} contentEditable="false">Update</button>
                     </div>
+                    {props.id != currentUser.id &&
                     <div className="profile-btns">
                         <button className="profile-btn">Message</button>
-                        <button className="profile-btn">Add friend</button>
+                        <button className="profile-btn" onClick={isFriend ?  ()=>unfollow() : ()=>follow() }>{
+                            isFriend ? "Unfollow" : "Follow"}
+                        </button>
                     </div>
+                    }
                 </div>
                 <div className="avatar-flex" onMouseOver={user_id==user.id ? ()=>avatarMouse() : ""} onMouseOut={user_id==user.id ? ()=>avatarMouseOut() : ""}>
                     <div ref={avatarRef} className="avatar">
@@ -146,10 +218,11 @@ export default function ProfileInfo(props) {
                     </form>
                     }
                     {user_id == user.id &&
-                    <button className="avatar-delete-btn" ref={avatarDeleteRef} onClick={()=> dialogRef.current.style.display = "block"}></button>
+                    <button className="avatar-delete-btn" ref={avatarDeleteRef} onClick={()=> dialogRef.current.style.display = "block"}/>
                     }
                 </div>
             </div>
+            <Friends friends={friends} friendsCount={user.friendsCount} followersCount={user.followersCount} followingCount={user.followingCount} groupCount={0} id={props.id}/>
             <CreatePost id={props.id}/>
         </div>
     );

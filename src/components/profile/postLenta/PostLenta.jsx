@@ -28,7 +28,7 @@ export default function PostLenta(props) {
             .then(response=> {
                 dispatch(getPosts(response.data))
             })
-    }, [])
+    }, [props.id])
 
     function commentClick(post){
         if( document.getElementById("comment-editor-" + post.id).style.display == "flex"){
@@ -90,6 +90,8 @@ export default function PostLenta(props) {
                 dispatch( deletePostAction(posts.filter(p => p.id !== post.id)))
             })
     }
+
+
 
     return (
         <div className={"lenta-flex"}>

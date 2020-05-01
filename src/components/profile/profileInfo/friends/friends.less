@@ -1,0 +1,55 @@
+.friends {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-evenly;
+
+  a {
+    color: black;
+    &:hover {
+      opacity: 0.7;
+      color: black;
+      text-decoration: none;
+    }
+  }
+  .left-block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0;
+  }
+  .right-block {
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    border: solid #E353D5 2px;
+
+    .friends-header {
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: 700;
+
+    }
+
+    width: 250px;
+
+
+    .friend-flex {
+      display: flex;
+      margin-top: 5px;
+
+      &-avatar {
+        background: url("../../../../assets/img/avatar.jpg") no-repeat center center;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        margin-right: 5px;
+        border: 1px #E353D5 solid;
+      }
+    }
+  }
+}
+.no-friends{
+  text-align: center;
+}

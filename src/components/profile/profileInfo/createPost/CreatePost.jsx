@@ -52,14 +52,17 @@ export default function CreatePost(props) {
 
     return (
         <div className="post-creator">
-            <textarea className="create-area" placeholder="Share your news..." ref={textRef}/>
-            <div className="post-btns">
-                <label for="post-file" className="file-label"/>
-                <input type="file" id="post-file" onChange={() =>screpkaClick()} ref={fileInputRef} className="skrepka-btn"/>
-                <button className="post-btn" onClick={()=>createPost()}>Add post</button>
-            </div>
-            <div className="loaded" ref={loadedRef}>
-                <div className="loaded-img" ref={loadedImgRef}></div>
+            <div className="post-creator-flex">
+                <textarea className="create-area" placeholder="Share your news..." ref={textRef}/>
+                <div className="post-btns">
+                    <label htmlFor="post-file" className="file-label"/>
+                    <input type="file" id="post-file" onChange={() => screpkaClick()} ref={fileInputRef}
+                           className="skrepka-btn"/>
+                    <button className="post-btn" onClick={() => createPost()}>Add post</button>
+                </div>
+                <div className="loaded" ref={loadedRef}>
+                    <div className="loaded-img" ref={loadedImgRef}></div>
+                </div>
             </div>
         </div>
     )

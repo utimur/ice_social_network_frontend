@@ -13,7 +13,8 @@ export default function LeftBar() {
             <ul>
                 <li><NavLink to={`/profile/${user.id}`}>My profile</NavLink></li>
                 <li><NavLink to="/dialogs">Dialogs</NavLink> </li>
-                <li><NavLink to="/users">Friends</NavLink></li>
+                <li><NavLink to={`/friends/${user.id}`}>Friends</NavLink></li>
+                <li><NavLink to={`/friends/0`}>All users</NavLink></li>
             </ul>
         </div>
     )

@@ -1,8 +1,6 @@
 .profile-info{
   display: flex;
   width: 100%;
-  background: white;
-  border-radius: 10px;
   flex-direction: column;
 
   .dialog-window{
@@ -41,21 +39,26 @@
   }
 
   &-flex {
-    padding-bottom: 40px;
+    border-radius: 10px;
+    //background: white;
     display: flex;
+    margin-bottom: 25px;
   }
   .avatar-flex{
     display: flex;
+    border: solid #E353D5 2px;
+
     flex-direction: column;
-    padding-bottom: 4px;
     position: relative;
+    background: white;
+    border-radius: 10px;
     .avatar {
       height: 250px;
       width: 250px;
+      border-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      border-top-right-radius: 10px;
       background: no-repeat center center ;
       background-size: cover;
     }
@@ -73,7 +76,7 @@
     form{
       width: 100%;
       position: absolute;
-      bottom: 3px;
+      bottom: 0;
       .avatar-input {
         display: none;
         width: 100%;
@@ -100,6 +103,10 @@
     justify-content: flex-start;
     width: 80%;
     padding: 4px 10px;
+    background: white;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: solid #E353D5 2px;
 
     .avatar{
       border-top-right-radius: 10px !important;
@@ -110,6 +117,7 @@
       display: flex;
       justify-content: flex-end;
       margin-top: auto;
+      margin-bottom: 10px;
       .profile-btn{
         padding: 3px 25px;
         border: none;
@@ -117,11 +125,8 @@
         background: #E353D5;
         box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.25);
         color: white;
-        transition: all 0.5s;
         margin: 0 5px;
-        &:hover{
-          border-radius: 15px;
-        }
+
         &:active , &:focus{
           outline: none !important;
 
