@@ -16,4 +16,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+button:active,
+button:focus {
+  outline: none;
+}
 /*# sourceMappingURL=app.css.map */

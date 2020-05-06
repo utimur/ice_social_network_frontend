@@ -1,6 +1,6 @@
-export const getDialogs = (dialogs) => {
+export const setDialogs = (dialogs) => {
     return {
-        type: "GET_DIALOGS",
+        type: "SET_DIALOGS",
         payload: dialogs,
     }
 }

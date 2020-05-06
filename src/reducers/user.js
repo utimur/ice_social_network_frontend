@@ -9,6 +9,7 @@ const defaultState = {
         online:"",
         email:"",
         isLoggedIn:false,
+        avatarStr:"",
         friends:[]
     }
 }
@@ -27,6 +28,7 @@ export default function user(state = defaultState, action) {
                     name:action.payload.name,
                     surname:action.payload.surname,
                     email:action.payload.email,
+                    avatarStr:action.payload.avatarStr,
                     isLoggedIn: true,
                 },
             };

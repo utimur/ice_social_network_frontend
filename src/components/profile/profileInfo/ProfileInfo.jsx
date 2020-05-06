@@ -7,6 +7,7 @@ import { updateUser} from '../../../actions/user'
 
 import CreatePost from "./createPost/CreatePost";
 import Friends from "./friends/Friends";
+import {NavLink} from "react-router-dom";
 
 export default function ProfileInfo(props) {
 
@@ -112,6 +113,7 @@ export default function ProfileInfo(props) {
             fr.onload = function () {
 
                 avatarRef.current.style.backgroundImage = `url(${fr.result})`;
+                dispatch(updateUser("avatarStr", fr.result))
             }
             fr.readAsDataURL(inputRef.current.files[0]);
         }).catch(response => alert("file is not loaded..."))
@@ -175,6 +177,10 @@ export default function ProfileInfo(props) {
             })
     }
 
+    function messageClick() {
+        props.history.push(`/chat/${props.id}`)
+    }
+
     return (
         <div className={"profile-info"}>
             <div className="dialog-window"  ref={dialogRef}>
@@ -201,7 +207,12 @@ export default function ProfileInfo(props) {
                     </div>
                     {props.id != currentUser.id &&
                     <div className="profile-btns">
-                        <button className="profile-btn">Message</button>
+                        <NavLink to={{
+                            pathname:`/chat/${props.id}`,
+                            state: {friend:user}
+                        }}>
+                            <button className="profile-btn" onClick={()=>messageClick()}>Message</button>
+                        </NavLink>
                         <button className="profile-btn" onClick={isFriend ?  ()=>unfollow() : ()=>follow() }>{
                             isFriend ? "Unfollow" : "Follow"}
                         </button>

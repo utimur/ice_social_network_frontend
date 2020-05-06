@@ -1,16 +1,37 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './dialog.css';
+import {NavLink} from "react-router-dom";
+import axios from 'axios';
+import {useSelector} from "react-redux";
+import avatar from "../../../assets/img/avatar.jpg";
 
 export default function Dialog(props) {
 
+    const currentUser = useSelector(state=>state.user.currentUser)
+    const dialog = props.dialog
+
+
     return (
-        <div className="dialog">
-            <div className="dialog-img"></div>
-            <div className="dialog-content">
-                <div className="dialog-content-username">Ульби Тимур</div>
-                <div className="dialog-content-message">Привет как дела?</div>
+        <NavLink to={{
+            pathname:`/chat/${props.friendId}`,
+            state: {friend:dialog.friend}
+        }}>
+            <div className="dialog">
+                <div className="dialog-img">
+                    <div className="dialog-img-left" style={dialog.user.avatarStr != null ? {
+                        backgroundImage: `url('data:image/jpeg;base64,${dialog.user.avatarStr}`,
+                    } : {backgroundImage: `url(${avatar})`}}/>
+                    <div className="dialog-img-delimeter"></div>
+                    <div className="dialog-img-right" style={dialog.friend.avatarStr != null ? {
+                        backgroundImage: `url('data:image/jpeg;base64,${dialog.friend.avatarStr}`,
+                    } : {backgroundImage: `url(${avatar})`}} />
+                </div>
+                <div className="dialog-content">
+                    <div className="dialog-content-username">{dialog.friend.surname + " " + dialog.friend.name }</div>
+                    <div className="dialog-content-message">{dialog.lastMessage}</div>
+                </div>
+                <div className="dialog-date">{dialog.lastMessageDate}</div>
             </div>
-            <div className="dialog-date">15:22 26.04.2020</div>
-        </div>
+        </NavLink>
     );
 };

@@ -17,7 +17,8 @@ export default function Login(props) {
         })
             .then(response => {
                 dispatch(signIn(response.data));
-                props.history.push('/chat')
+                props.history.push(`/profile/${response.data.id}`)
+                console.log(response.data)
             } )
             .catch(()=>alert("Uncorrect data"))
     }

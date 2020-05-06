@@ -1,22 +1,50 @@
 .dialog {
   display: flex;
   padding: 10px 20px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 15px;
+  &:hover {
+    border-bottom: 2px solid #E353D5;
+    border-top: 2px solid #E353D5;
+  }
+
   &-img {
-    background: gray no-repeat center center;
-    background-size: cover;
-    height: 60px;
+    display: flex;
+    border: #E353D5 solid 2px;
     border-radius: 100px;
-    width: 60px;
+
+    &-left {
+      background: url("../../../assets/img/avatar.jpg") no-repeat center center;
+      background-size: cover;
+      height: 70px;
+      width: 35px;
+      border-radius: 100px 0 0 100px;
+    }
+
+    &-right {
+      background: url("../../../assets/img/bboy_avatar.png") no-repeat center center;
+      background-size: cover;
+      height: 70px;
+      width: 35px;
+      border-radius: 0 100px 100px 0;
+    }
+    &-delimeter{
+      width: 2px;
+      height: 100%;
+      background:#E353D5;
+      margin: 0 1px;
+    }
   }
 
   &-content {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
+
     &-username {
       font-size: 1.2em;
       font-weight: 700;
-
     }
 
     &-message {
@@ -26,7 +54,7 @@
     }
   }
 
-  &-date{
+  &-date {
     margin-left: auto;
     font-size: 0.8em;
     color: gray;

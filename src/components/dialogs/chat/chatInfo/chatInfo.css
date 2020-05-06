@@ -1,0 +1,49 @@
+.chat-info {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: #E353D5 solid 2px;
+}
+.chat-info-img {
+  background: gray no-repeat center center;
+  background-size: cover;
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+}
+.chat-info-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.chat-info-content a {
+  color: black;
+}
+.chat-info-content a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.chat-info-content-username {
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.chat-info-content-online {
+  font-weight: 500;
+  color: gray;
+  font-size: 0.6em;
+}
+.chat-info-settings {
+  margin-left: auto;
+  background: url("../../../../assets/img/dots.png") no-repeat center center;
+  background-size: cover;
+  height: 22px;
+  width: 8px;
+  border: none;
+}
+.chat-info-settings:active,
+.chat-info-settings:focus {
+  outline: none;
+}
+/*# sourceMappingURL=chatInfo.css.map */

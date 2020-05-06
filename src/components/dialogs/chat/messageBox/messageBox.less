@@ -1,0 +1,18 @@
+.messages {
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+  margin: 10px 0;
+  border:#E353D5 solid 2px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* хром, сафари */
+  &::-webkit-scrollbar { width: 0 ; }
+
+  /* ie 10+ */
+   -ms-overflow-style: none;
+
+  /* фф (свойство больше не работает, других способов тоже нет)*/
+   overflow: -moz-scrollbars-none;
+}

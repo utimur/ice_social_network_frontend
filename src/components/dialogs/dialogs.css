@@ -5,15 +5,16 @@
   flex-direction: column;
   margin: 15px 0;
 }
+.dialogs a {
+  color: inherit;
+}
+.dialogs a:hover {
+  text-decoration: none;
+}
 .dialogs .search {
   background: white;
   width: 100%;
   padding: 15px;
-  border-radius: 10px;
-}
-.dialogs-flex {
-  margin-top: 15px;
-  background: white;
   border-radius: 10px;
 }
 /*# sourceMappingURL=dialogs.css.map */

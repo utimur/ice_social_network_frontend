@@ -1,13 +1,38 @@
 .dialog {
   display: flex;
   padding: 10px 20px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.dialog:hover {
+  border-bottom: 2px solid #E353D5;
+  border-top: 2px solid #E353D5;
 }
 .dialog-img {
-  background: gray no-repeat center center;
-  background-size: cover;
-  height: 60px;
+  display: flex;
+  border: #E353D5 solid 2px;
   border-radius: 100px;
-  width: 60px;
+}
+.dialog-img-left {
+  background: url("../../../assets/img/avatar.jpg") no-repeat center center;
+  background-size: cover;
+  height: 70px;
+  width: 35px;
+  border-radius: 100px 0 0 100px;
+}
+.dialog-img-right {
+  background: url("../../../assets/img/bboy_avatar.png") no-repeat center center;
+  background-size: cover;
+  height: 70px;
+  width: 35px;
+  border-radius: 0 100px 100px 0;
+}
+.dialog-img-delimeter {
+  width: 2px;
+  height: 100%;
+  background: #E353D5;
+  margin: 0 1px;
 }
 .dialog-content {
   display: flex;

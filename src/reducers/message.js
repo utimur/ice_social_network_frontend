@@ -1,5 +1,6 @@
 const defaultState = {
     messages:[],
+    dialogId:0
 }
 
 export default function message(state = defaultState, action) {
@@ -13,6 +14,11 @@ export default function message(state = defaultState, action) {
             return {
                 ...state,
                 messages: [...state.messages, action.payload]
+            }
+        case "SET_DIALOG":
+            return {
+                ...state,
+                dialogId: action.payload
             }
 
         default:

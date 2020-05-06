@@ -9,6 +9,7 @@ import {useSelector} from "react-redux";
 import "./app.css"
 import Dialogs from "./dialogs/Dialogs";
 import FriendList from "./friendList/FriendList";
+import Chat from "./dialogs/chat/Chat";
 
 export default function App() {
     const user = useSelector(state => state.user.currentUser)
@@ -24,7 +25,8 @@ export default function App() {
                         {/*}*/}
                             <Route path="/profile/:id" component={Profile}/>
                             <Route path="/friends/:id" component={FriendList}/>
-                            <Route path="/dialogs" component={Dialogs}/>
+                            <Route path="/dialogs/" component={Dialogs}/>
+                            <Route path="/chat/:id" component={Chat}/>
                         <Route path="/registration" component={Registration} />
                         <Route path="/login" component={Login}/>
                     </div>

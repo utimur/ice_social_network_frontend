@@ -11,3 +11,10 @@ export const addMessage = (msg) => {
         payload: msg
     }
 }
+
+export const setMessage = (dialogId) => {
+    return {
+        type: "SET_DIALOG",
+        payload: dialogId
+    }
+}
