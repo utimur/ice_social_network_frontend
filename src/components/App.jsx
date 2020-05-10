@@ -10,26 +10,28 @@ import "./app.css"
 import Dialogs from "./dialogs/Dialogs";
 import FriendList from "./friendList/FriendList";
 import Chat from "./dialogs/chat/Chat";
+import FollowersList from "./followersList/FollowersList";
 
 export default function App() {
-    const user = useSelector(state => state.user.currentUser)
+    const user = useSelector(state => state.user)
 
 
     return (
         <BrowserRouter>
             <div className={"main"}>
-                    <Navbar/>
-                    <div className="content-flex">
-                        {/*{user.isLoggedIn == true &&*/}
-                              <LeftBar/>
-                        {/*}*/}
-                            <Route path="/profile/:id" component={Profile}/>
-                            <Route path="/friends/:id" component={FriendList}/>
-                            <Route path="/dialogs/" component={Dialogs}/>
-                            <Route path="/chat/:id" component={Chat}/>
-                        <Route path="/registration" component={Registration} />
-                        <Route path="/login" component={Login}/>
-                    </div>
+                <Route component={Navbar}/>
+                <div className="content-flex">
+                    {user.isLoggedIn == true &&
+                         <Route component={LeftBar}/>
+                    }
+                    <Route path="/profile/:id" component={Profile}/>
+                    <Route path="/friends/:id" component={FriendList}/>
+                    <Route path="/followers/:id" component={FollowersList}/>
+                    <Route path="/dialogs/" component={Dialogs}/>
+                    <Route path="/chat/:id" component={Chat}/>
+                    <Route path="/registration" component={Registration} />
+                    <Route path="/login" component={Login}/>
+                </div>
             </div>
         </BrowserRouter>
 

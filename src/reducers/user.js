@@ -8,10 +8,14 @@ const defaultState = {
         status:"",
         online:"",
         email:"",
-        isLoggedIn:false,
         avatarStr:"",
+        friendsCount:0,
+        followersCount:0,
+        followingCount:0,
+        groupsCount:0,
         friends:[]
-    }
+    },
+    isLoggedIn:false,
 }
 
 export default function user(state = defaultState, action) {
@@ -19,33 +23,14 @@ export default function user(state = defaultState, action) {
         case "LOGIN":
             return {
                 ...state,
-                currentUser: {
-                    username:action.payload.username,
-                    password:action.payload.password,
-                    id:action.payload.id,
-                    status:action.payload.status,
-                    online:action.payload.online,
-                    name:action.payload.name,
-                    surname:action.payload.surname,
-                    email:action.payload.email,
-                    avatarStr:action.payload.avatarStr,
-                    isLoggedIn: true,
-                },
+                currentUser: action.payload,
+                isLoggedIn: true,
             };
         case "LOGOUT":
             return {
                 ...state,
-                currentUser: {
-                    username:"",
-                    password:"",
-                    status:"",
-                    online:"",
-                    name:"",
-                    surname:"",
-                    email:"",
-                    id:0,
-                    isLoggedIn: false,
-                }
+                currentUser: null,
+                isLoggedIn: false,
             }
         case "UPDATE_USER":
             return {

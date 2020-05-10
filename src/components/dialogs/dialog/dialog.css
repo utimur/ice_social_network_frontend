@@ -13,6 +13,8 @@
   display: flex;
   border: #E353D5 solid 2px;
   border-radius: 100px;
+  height: 72px;
+  align-self: center;
 }
 .dialog-img-left {
   background: url("../../../assets/img/avatar.jpg") no-repeat center center;
@@ -47,6 +49,7 @@
   font-size: 0.8em;
   color: gray;
   font-weight: 500;
+  word-break: break-word;
 }
 .dialog-date {
   margin-left: auto;

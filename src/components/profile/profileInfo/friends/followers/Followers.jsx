@@ -8,7 +8,10 @@ export default function Followers(props) {
 
     return(
         <div className="followers">
-            <NavLink to={`/followers/`}>
+                <NavLink to={{
+                    pathname:`/followers/${props.id}`,
+                    state: {type:props.name}
+                }}>
                 <div className="followers-header">{props.name}</div>
                 <div className="followers-count">{props.count}</div>
             </NavLink>

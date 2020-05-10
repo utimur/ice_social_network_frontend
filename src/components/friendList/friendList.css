@@ -5,39 +5,6 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-}
-.friend-list .users .user {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-}
-.friend-list .users .user-avatar {
-  background: no-repeat center center;
-  background-size: cover;
-  border-radius: 100px;
-  width: 150px;
-  height: 150px;
-  border: 2px solid #E353D5;
-}
-.friend-list .users .user-info {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.friend-list .users .user-info a {
-  color: black;
-}
-.friend-list .users .user-info-username {
-  font-size: 1.3em;
-  font-weight: 500;
-}
-.friend-list .users .user-info-id {
-  color: gray;
-}
-.friend-list .users .user-online {
-  color: gray;
-  margin-left: auto;
-  margin-bottom: 30px;
+  padding: 5px;
 }
 /*# sourceMappingURL=friendList.css.map */

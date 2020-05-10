@@ -1,0 +1,43 @@
+.users {
+  background: white;
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  height: fit-content;
+}
+.users .user {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.users .user-avatar {
+  background: no-repeat center center;
+  background-size: cover;
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #E353D5;
+}
+.users .user-info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.users .user-info a {
+  color: black;
+}
+.users .user-info-username {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.users .user-info-id {
+  color: gray;
+}
+.users .user-online {
+  color: gray;
+  margin-left: auto;
+}
+/*# sourceMappingURL=userList.css.map */

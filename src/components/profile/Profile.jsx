@@ -7,12 +7,12 @@ import PostLenta from "./postLenta/PostLenta";
 
 export default function Profile(props) {
 
-    const currentUser = useSelector(state => state.user.currentUser)
+    const currentUser = useSelector(state => state.user)
 
 
-    // if (currentUser.isLoggedIn == false) {
-    //     return <Redirect to={"/login"}></Redirect>
-    // }
+    if (currentUser.isLoggedIn == false) {
+        return <Redirect to={"/login"}></Redirect>
+    }
 
     return (
         <div className={"profile"}>

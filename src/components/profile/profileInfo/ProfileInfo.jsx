@@ -8,6 +8,16 @@ import { updateUser} from '../../../actions/user'
 import CreatePost from "./createPost/CreatePost";
 import Friends from "./friends/Friends";
 import {NavLink} from "react-router-dom";
+import {
+    deleteAvatar, follow,
+    // getAvatar,
+    getFollowers,
+    getFollowing,
+    getFriends,
+    getIsFriend,
+    getProfile,
+    sendFile, unfollow, updateStatus
+} from "../../../effect/user";
 
 export default function ProfileInfo(props) {
 
@@ -26,121 +36,19 @@ export default function ProfileInfo(props) {
     const [friends, setFriends] = useState([])
     const [followers, setFollowers] = useState([]);
     const [following, setFollowing] = useState([]);
+    const [avatarChange, setAvatarChange] = useState(0)
 
     useEffect(() => {
-        getAvatar()
-        getFriends()
-        getFollowing()
-        getFollowers()
-        getIsFriend()
-        getProfile()
-    }, [props.id, isFriend]);
-
-    function getFollowers() {
-        axios.get(`http://localhost:8080/friends/followers?id=${props.id}`)
-            .then(response=>{
-                if(response.data.length > 5){
-                    setFollowers(response.data.slice(0,5));
-                } else {
-                    setFollowers(response.data);
-                }
-            })
-    }
-    function getFollowing() {
-        axios.get(`http://localhost:8080/friends/following?id=${props.id}`)
-            .then(response=>{
-                if(response.data.length > 5){
-                    setFollowing(response.data.slice(0,5));
-                } else {
-                    setFollowing(response.data);
-                }
-            })
-    }
-    function getFriends() {
-        axios.get(`http://localhost:8080/friends?id=${props.id}`)
-            .then(response=>{
-                if(response.data.length > 3){
-                    setFriends(response.data.slice(0,3));
-                } else {
-                    setFriends(response.data);
-                }
-            })
-    }
-    function getAvatar() {
-        axios.get(
-            `http://localhost:8080/upload?user_id=${props.id}`,
-            {responseType: 'arraybuffer'},
-        )
-            .then(response => {
-                if (response.data.byteLength != 0) {
-                    const base64 = btoa(
-                        new Uint8Array(response.data).reduce(
-                            (data, byte) => data + String.fromCharCode(byte),
-                            '',
-                        ),
-                    );
-                    avatarRef.current.style.backgroundImage = `url(data:;base64,${base64})`
-                } else {
-                    avatarRef.current.style.backgroundImage = `url(${avatar})`
-                }
-            });
-    }
-    function getIsFriend() {
-        axios.get(`http://localhost:8080/friends/find?id=${currentUser.id}&friend_id=${props.id}`)
-            .then(responce => {
-                if (responce.data) {
-                    setIsFriend(true);
-                }
-            })
-    }
-    function getProfile() {
-        axios.get(`http://localhost:8080/profile/${props.id}`)
-            .then(response => {
-                setUser(response.data)
-            })
-    }
-
-    function sendFile() {
-        const form = new FormData()
-        form.append("file", inputRef.current.files[0])
-        form.append("user_id", user_id)
-        axios.post("http://localhost:8080/upload", form , {
-            headers: {
-                'Content-Type' : 'multipart/form-data'
-            }
-        }).then(response => {
-            var fr = new FileReader();
-            fr.onload = function () {
-
-                avatarRef.current.style.backgroundImage = `url(${fr.result})`;
-                dispatch(updateUser("avatarStr", fr.result))
-            }
-            fr.readAsDataURL(inputRef.current.files[0]);
-        }).catch(response => alert("file is not loaded..."))
-    }
+        getFriends(props,setFriends)
+        getFollowing(props, setFollowing)
+        getFollowers(props, setFollowers)
+        getIsFriend(currentUser, props,setIsFriend)
+        getProfile(props, setUser)
+    }, [props.id, isFriend, avatarChange]);
 
     function statusChange(event) {
         updateStatusRef.current.style.display = "block"
     }
-
-    function updateStatus() {
-        dispatch(updateUser("status",statusRef.current.innerText))
-        const newUser = currentUser
-        newUser.status = statusRef.current.innerText
-        console.log(newUser)
-        axios.post("http://localhost:8080/profile", {
-            username:newUser.username,
-            password:newUser.password,
-            status:newUser.status,
-            online:newUser.online,
-            name:newUser.name,
-            surname:newUser.surname,
-            email:newUser.email,
-            id:newUser.id,
-        }).then(response => console.log(response.data))
-        updateStatusRef.current.style.display = "none"
-    }
-
     function avatarMouse() {
         avatarDeleteRef.current.style.display = "block"
         avatarLabelRef.current.style.visibility = "visible"
@@ -151,32 +59,6 @@ export default function ProfileInfo(props) {
         avatarLabelRef.current.style.display = "none"
         avatarDeleteRef.current.style.display = "none"
     }
-
-    function deleteAvatar() {
-        avatarRef.current.style.backgroundImage = `url(${avatar})`
-        axios.post("http://localhost:8080/upload/delete", {
-            "id":user_id
-        }).then(response=> dialogRef.current.style.display = "none")
-    }
-
-    function follow() {
-        axios.post("http://localhost:8080/friends", {
-            id:currentUser.id,
-            friendId:props.id
-        }).then(response=>{
-            setIsFriend(true);
-            // setFollowing([...followers, response.data])
-        })
-    }
-
-    function unfollow() {
-        axios.delete(`http://localhost:8080/friends?id=${currentUser.id}&friend_id=${props.id}`)
-            .then(response => {
-                setIsFriend(false);
-                console.log(response.data)
-            })
-    }
-
     function messageClick() {
         props.history.push(`/chat/${props.id}`)
     }
@@ -186,7 +68,7 @@ export default function ProfileInfo(props) {
             <div className="dialog-window"  ref={dialogRef}>
                 <div className="dialog-text"> Do you really want to delete your avatar?</div>
                 <div className="dialog-btns">
-                    <button onClick={()=>deleteAvatar()}>Delete</button>
+                    <button onClick={()=>deleteAvatar(avatarRef, user_id, dialogRef,setAvatarChange, avatarChange)}>Delete</button>
                     <button onClick={()=> dialogRef.current.style.display = "none"}>Cancel</button>
                 </div>
             </div>
@@ -203,7 +85,8 @@ export default function ProfileInfo(props) {
                              className="status-area">
                             {(user.status == null && user_id == user.id) ? "Enter your status" : user.status}
                         </div>
-                        <button onClick={()=>updateStatus()} className="status-btn" ref={updateStatusRef} contentEditable="false">Update</button>
+                        <button onClick={()=>updateStatus(statusRef, updateStatusRef,currentUser, dispatch)} className="status-btn" ref={updateStatusRef}
+                                contentEditable="false">Update</button>
                     </div>
                     {props.id != currentUser.id &&
                     <div className="profile-btns">
@@ -213,19 +96,24 @@ export default function ProfileInfo(props) {
                         }}>
                             <button className="profile-btn" onClick={()=>messageClick()}>Message</button>
                         </NavLink>
-                        <button className="profile-btn" onClick={isFriend ?  ()=>unfollow() : ()=>follow() }>{
+                        <button className="profile-btn"
+                                onClick={isFriend ?  ()=>unfollow(currentUser, props,setIsFriend)
+                                    : ()=>follow(currentUser, props, setIsFriend) }>{
                             isFriend ? "Unfollow" : "Follow"}
                         </button>
                     </div>
                     }
                 </div>
                 <div className="avatar-flex" onMouseOver={user_id==user.id ? ()=>avatarMouse() : ""} onMouseOut={user_id==user.id ? ()=>avatarMouseOut() : ""}>
-                    <div ref={avatarRef} className="avatar">
+                    <div ref={avatarRef} className="avatar" style={ user.avatarStr != null ? {
+                        backgroundImage: `url('data:image/jpeg;base64,${user.avatarStr}`,
+                    } : {backgroundImage:`url(${avatar})`}}>
                     </div>
                     {user_id == user.id &&
                     <form name="uploader" method="POST">
                         <label htmlFor="avatar-input" ref={avatarLabelRef} className="avatar-label">Change</label>
-                        <input id="avatar-input" className="avatar-input" name="file" type="file" ref={inputRef} onChange={() => sendFile()}/>
+                        <input id="avatar-input" className="avatar-input" name="file" type="file"
+                               ref={inputRef} onChange={() => sendFile(inputRef, user_id, dispatch, setAvatarChange, avatarChange)}/>
                     </form>
                     }
                     {user_id == user.id &&

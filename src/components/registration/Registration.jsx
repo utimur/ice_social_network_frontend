@@ -2,10 +2,9 @@ import React, {useRef} from "react";
 import './registration.css';
 import {useDispatch,useSelector} from "react-redux";
 import axios from 'axios'
+import {registrationEffect} from "../../effect/user";
 
 export default function Registration() {
-    const dispatch = useDispatch()
-    const currentUser =  useSelector(state=> state.user.currentUser)
     const usernameRef = useRef()
     const passwordRef = useRef()
     const nameRef = useRef()
@@ -13,16 +12,7 @@ export default function Registration() {
     const emailRef = useRef()
 
     function regButClick(){
-        axios.post("http://localhost:8080/registration",
-            {
-                username: usernameRef.current.value,
-                password: passwordRef.current.value,
-                name: nameRef.current.value,
-                surname: surnameRef.current.value,
-                email: emailRef.current.value,
-                online: "online",
-            }).then(response => alert("success"))
-            .catch(response => alert("user already exists"))
+        registrationEffect(usernameRef, passwordRef,nameRef,surnameRef,emailRef)
     }
 
     return(

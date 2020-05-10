@@ -19,8 +19,8 @@ export default function Friends(props) {
 
 
             <div className="left-block">
-                <Followers  count={props.followersCount} name="Followers"/>
-                <Followers count={props.followingCount} name="Following"/>
+                <Followers  count={props.followersCount} name="followers" id={props.id}/>
+                <Followers count={props.followingCount} name="following" id={props.id}/>
                 <Followers  count={0} name="My groups"/>
             </div>
 

@@ -43,6 +43,12 @@
 .friend-message-username {
   font-weight: 700;
 }
+.friend-message-img {
+  background: no-repeat center center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
 .friend-message-text {
   font-size: 0.9em;
   margin: 5px 0;

@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {logOut} from "../../actions/user";
 
 export default function Navbar(props) {
-    const user = useSelector(state => state.user.currentUser)
+    const user = useSelector(state => state.user)
     const dispatch = useDispatch()
 
     function logOutClick() {
@@ -20,7 +20,7 @@ export default function Navbar(props) {
                 {
                     user.isLoggedIn  ?
                         (
-                                <NavLink to="/"> <button className="logout-btn" onClick={()=>logOutClick()}>Log out</button></NavLink>
+                                <NavLink to="/login"> <button className="logout-btn" onClick={()=>logOutClick()}>Log out</button></NavLink>
                         ) : (
                             <div>
                                 <NavLink className="sign" to="/login">Log in</NavLink>
